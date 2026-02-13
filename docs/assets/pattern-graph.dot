@@ -1,0 +1,41 @@
+digraph PatternLanguage {
+    rankdir=TB;
+    node [shape=box, style="rounded,filled", fontname="Helvetica", fontsize=10];
+    edge [color="#666666", arrowsize=0.7];
+
+    subgraph cluster_1 {
+        label="Organisational Philosophy";
+        style=dashed;
+        color="#8B0000";
+        fontname="Helvetica";
+        fontsize=11;
+
+        p1 [label="1. Generative Culture ** [AI]", fillcolor="#8B000033", color="#8B0000"];
+    }
+
+    subgraph cluster_4 {
+        label="Development Practices";
+        style=dashed;
+        color="#668800";
+        fontname="Helvetica";
+        fontsize=11;
+
+        p24 [label="24. AI-Assisted Development [AI]", fillcolor="#66880033", color="#668800"];
+    }
+
+    subgraph cluster_5 {
+        label="Delivery Pipeline";
+        style=dashed;
+        color="#006644";
+        fontname="Helvetica";
+        fontsize=11;
+
+        p28 [label="28. Deployment Pipeline ** [AI]", fillcolor="#00664433", color="#006644"];
+    }
+
+    // Completion links (downward)
+    p24 -> p28;
+
+    // Context links (upward, dashed)
+    p1 -> p24 [style=dashed];
+}
