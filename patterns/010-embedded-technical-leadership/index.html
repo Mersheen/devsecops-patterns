@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../009-team-aligned-architecture/">
       
-        <link rel="next" href="patterns/001-blast-radius-based-investment/">
+      
+        <link rel="next" href="../011-error-budget/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>10. Embedded Technical Leadership - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-pattern-language-for-devops" class="md-skip">
+        <a href="#embedded-technical-leadership" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              10. Embedded Technical Leadership
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,37 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -277,109 +252,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns by Scale
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patterns by Scale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Philosophy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -400,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -427,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -473,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -501,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -529,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -557,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -585,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -613,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -641,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -669,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -694,10 +566,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patterns/010-embedded-technical-leadership/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    10. Embedded Technical Leadership
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -713,6 +612,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -725,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -753,7 +750,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -781,7 +778,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -809,7 +806,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -837,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -865,7 +862,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -893,7 +890,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -921,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -949,7 +946,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -977,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -1005,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -1033,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -1061,7 +1058,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -1089,7 +1086,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/024-rollback-capability/" class="md-nav__link">
+      <a href="../024-rollback-capability/" class="md-nav__link">
         
   
   
@@ -1117,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1145,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1173,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/027-defence-in-depth/" class="md-nav__link">
+      <a href="../027-defence-in-depth/" class="md-nav__link">
         
   
   
@@ -1201,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1229,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1257,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1285,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1313,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1341,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1369,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1397,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1425,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1453,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/037-open-incident-communication/" class="md-nav__link">
+      <a href="../037-open-incident-communication/" class="md-nav__link">
         
   
   
@@ -1481,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1509,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1537,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1565,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1593,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1621,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1677,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1705,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1733,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1761,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+      <a href="../048-legacy-integration-risk-treatment/" class="md-nav__link">
         
   
   
@@ -1789,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1817,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1845,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1873,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1901,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1929,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1957,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/055-branch-based-testing/" class="md-nav__link">
+      <a href="../055-branch-based-testing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2013,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -2041,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2069,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -2097,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -2125,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2153,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2208,22 +2205,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
+  <a href="#forces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns by Scale
+        Forces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Patterns by Scale">
+    <nav class="md-nav" aria-label="Forces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
+  <a href="#how-the-forces-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Philosophy
+        How the forces apply
       
     </span>
   </a>
@@ -2231,43 +2228,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
+  <a href="#scarcity-constraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
+        Scarcity constraint
       
     </span>
   </a>
@@ -2280,10 +2244,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#real-world-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2307,103 +2299,75 @@
 
 
 
-<h1 id="a-pattern-language-for-devops">A Pattern Language for DevOps<a class="headerlink" href="#a-pattern-language-for-devops" title="Permanent link">&para;</a></h1>
-<p>A pattern language for how software engineering organisations build, deliver,
-and operate software. Following Christopher Alexander's methodology.</p>
-<p>AI is not a section. It is a force present at every level.</p>
-<p><img alt="Pattern Graph" loading="lazy" src="assets/pattern-graph.svg" /></p>
-<h2 id="patterns-by-scale">Patterns by Scale<a class="headerlink" href="#patterns-by-scale" title="Permanent link">&para;</a></h2>
-<h3 id="organisational-philosophy">Organisational Philosophy<a class="headerlink" href="#organisational-philosophy" title="Permanent link">&para;</a></h3>
+<h1 id="embedded-technical-leadership">Embedded Technical Leadership **<a class="headerlink" href="#embedded-technical-leadership" title="Permanent link">&para;</a></h1>
+<p><em>When <strong>Shared Ownership of Production (4)</strong> establishes that operational expertise is integrated with delivery rather than separated, and <strong>Knowledge-Based Authority (7)</strong> grants decision authority to expertise rather than rank, organisations attempting work they have not done before still fail because no one with both authority and experience is in the room when decisions are made.</em></p>
+<hr />
+<p><strong>An organisation lacking internal experience with the kind of work it is attempting cannot evaluate the advice it receives, interpret warning signals, or make timely corrective decisions. External advisors and consultants can identify problems, but they cannot force action — their reports accumulate without effect. Positional leaders with authority lack the technical depth to judge whether warnings are credible, and technical staff with depth lack the positional authority to change plans. The gap between expertise and authority ensures that by the time a problem escalates to someone who can act, it is too late.</strong></p>
+<hr />
+<p>The pattern appears most clearly in rescue operations. When Healthcare.gov collapsed on launch day in October 2013, the Obama administration brought in Mikey Dickerson from Google, Todd Park, and Jeff Zients. Dickerson was not the most senior person by government hierarchy, but he had direct experience operating systems at Google's scale. He was placed in the operational structure with authority to halt work, reallocate resources, change technical direction, and escalate risks directly to the White House. The rescue succeeded not because Dickerson wrote code — though he did — but because someone who understood the technical constraints had the authority to make decisions in real time without waiting for consensus or approval from people who did not understand those constraints.</p>
+<p>Contrast this with the original Healthcare.gov launch. CMS had hired TurningPoint as an independent verification and validation contractor. TurningPoint produced 11 reports flagging critical risks: no end-to-end testing, no designated system integrator, unrealistic schedules, unresolved technical dependencies. CMS admitted placing "little priority on these assessments." The reports were technically accurate, but the people writing them had no authority to stop the launch, and the people with authority to stop the launch did not trust or understand the reports. Political pressure to launch on time overrode technical warnings because no one in the decision-making chain had the experience to know that the warnings were not hypothetical risks but certain failure.</p>
+<p>The Boeing 737 MAX certification process followed the same pattern. Engineers raised concerns about MCAS (the Maneuvering Characteristics Augmentation System) internally, but commercial and schedule pressures overrode engineering judgement. Internal communications released during Congressional investigation showed engineers discussing risks, but the decision-making authority rested with executives optimising for certification timeline and training cost minimisation rather than safety margins. The absence of embedded technical leadership with both expertise and authority meant that engineering concerns were treated as negotiable inputs to business decisions rather than as binding constraints.</p>
+<p>The distinguishing feature of embedded technical leadership is the combination of technical depth and positional authority in one person. Most organisations separate these: technical staff provide input, managers make decisions. This works when the work is familiar and risks are well-understood, but it fails when the organisation is attempting something novel. A manager who has never operated a system at the required scale cannot distinguish between a credible warning and routine risk-aversion. A technical expert who has no authority to halt work will watch the organisation proceed toward a failure they can predict but not prevent.</p>
+<p>Google's embedded SRE model provides a peacetime version of this pattern. Site Reliability Engineers are not a separate operations team that receives handoffs from developers. They are embedded within product teams with authority to enforce reliability standards, including the authority to halt feature development when error budgets are exhausted. The embedded SRE has both technical depth (they understand distributed systems, capacity planning, and operational failure modes) and structural authority (they can say no to a deployment). This prevents the dynamic where developers push for features and operators push back, with decisions escalating to a manager who lacks context. Instead, the SRE is in the room when plans are made, and their judgment is binding.</p>
+<p>The UK Government Digital Service placed "delivery managers" and technical architects within departmental projects with explicit authority to escalate concerns directly to the Cabinet Office if governance or technical standards were being bypassed. These were not advisory roles — the delivery managers could halt spending or escalate failures publicly. The model worked because the delivery managers had both credibility (they had delivered similar projects before) and authority (backed by Cabinet Office spend controls). Departments could not ignore them or route around them.</p>
+<p>The cost is scarcity and displacement. Experienced technical leaders who can operate at this level are rare and expensive. Embedding them within operational teams means they are not available for other work. Bringing in external expertise — as with Dickerson at Healthcare.gov — creates political friction with existing leaders who feel undermined or bypassed. The embedded leader becomes a single point of failure: if they leave, the organisation may lose the capability to make good decisions. And there is risk of dependency: the organisation may defer to embedded expertise rather than building its own capability, perpetuating the knowledge gap.</p>
+<p>Therefore:</p>
+<p><strong>People with direct experience delivering technology at comparable scale are placed in decision-making roles embedded in the operational structure with direct access to teams. They hold both delivery accountability and sufficient authority to change plans, reallocate resources, halt work, and escalate risks. They participate in daily work rather than governing from above. When internal expertise does not exist, the organisation brings in external leaders with a mandate to build internal capability, not to deliver and leave. The embedded leader's authority is structural — documented in reporting lines and delegation — not personal or informal. Their mandate includes stopping work that is proceeding toward failure, even when that work is politically or commercially important.</strong></p>
+<hr />
+<p><em>This pattern is completed by <strong>Multidisciplinary Team (16)</strong>, which ensures that the teams where technical leaders are embedded contain the full range of disciplines needed to act on expert judgement without cross-team handoffs. <strong>Blameless Post-Incident Review (34)</strong> provides the structured learning mechanism through which embedded leaders' decisions during incidents are examined and improved. <strong>Corrective Action Integration into Delivery (45)</strong> converts the insights that embedded leaders surface into concrete engineering work integrated with the delivery backlog. <strong>Iterative Delivery (47)</strong> provides the cadence within which embedded technical leaders can steer direction incrementally rather than relying on large, infrequent course corrections.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/001-blast-radius-based-investment/">1. Blast Radius-Based Investment **</a> · AI</li>
-<li><a href="patterns/002-working-in-the-open/">2. Working in the Open **</a></li>
-<li><a href="patterns/003-progressive-trust/">3. Progressive Trust *</a> · AI</li>
-<li><a href="patterns/004-shared-ownership-of-production/">4. Shared Ownership of Production **</a></li>
-<li><a href="patterns/005-content-as-code/">5. Content as Code *</a> · AI</li>
-<li><a href="patterns/006-design-principles-as-alignment-mechanism/">6. Design Principles as Alignment Mechanism **</a></li>
-<li><a href="patterns/007-knowledge-based-authority/">7. Knowledge-Based Authority *</a></li>
+<li>
+<p><strong>Speed vs Safety</strong>: This is the primary force. Embedded technical leadership slows decision-making when the embedded leader says no — when they halt a deployment, refuse to approve a shortcut, or escalate a risk. But it dramatically increases safety by ensuring that decisions are made by people who understand the consequences. The pattern resolves this by accepting slower decisions in exchange for fewer catastrophic failures. The safety benefit compounds: organisations with embedded technical leadership avoid the much larger delays caused by recovering from avoidable failures.</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong>: This is secondary. Embedded technical leaders constrain team autonomy — they can override local decisions, mandate architectural changes, or halt work. But they also increase autonomy by providing air cover: a team with an embedded leader who can say no to unrealistic demands has more autonomy to do good work than a team pressured to deliver impossible commitments. The pattern shifts the locus of alignment from hierarchical mandate to embedded judgment.</p>
+</li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: Embedded leaders must comprehend both the technical system and the organisational context — the dependencies, the constraints, the political pressures, the capability gaps. This is a demanding scope. The pattern addresses this by embedding leaders close enough to the work that they can maintain comprehension through direct participation rather than abstracted reporting. A leader who attends daily standups and reviews pull requests maintains comprehension that a leader who reads weekly status reports cannot.</p>
+</li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: Embedded technical leadership is inherently adaptive — decisions depend on the embedded leader's judgment in context, not on predefined rules. This creates discomfort in organisations that expect deterministic processes. The pattern does not resolve this tension; it accepts that novel, high-stakes technical work requires adaptive decision-making and embeds the people capable of exercising that judgment where they can act on it.</p>
+</li>
 </ul>
-<h3 id="organisational-structure">Organisational Structure<a class="headerlink" href="#organisational-structure" title="Permanent link">&para;</a></h3>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Experienced technical leaders capable of operating at the required level are scarce and expensive. The market for people who can lead large-scale technical delivery is competitive, and organisations must pay accordingly. Embedding these leaders within operational teams means they are not available for other high-value work — an opportunity cost. Bringing in external expertise creates political tension with existing leaders who may feel displaced or undermined, and the organisation must manage this friction or risk losing institutional knowledge when displaced leaders leave. The embedded leader becomes a dependency: teams may defer decisions to them rather than building their own judgment, and if the embedded leader leaves, the organisation may lose the capability to make good decisions. Finally, the pattern requires organisational discipline to respect the embedded leader's authority when they deliver unwelcome news — halting a launch, declaring a timeline unrealistic, or escalating failure publicly. This discipline is culturally difficult and politically expensive.</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/008-platform-team/">8. Platform Team **</a> · AI</li>
-<li><a href="patterns/009-team-aligned-architecture/">9. Team-Aligned Architecture **</a></li>
-<li><a href="patterns/010-embedded-technical-leadership/">10. Embedded Technical Leadership **</a></li>
-<li><a href="patterns/011-error-budget/">11. Error Budget **</a></li>
-<li><a href="patterns/012-escalation-with-integrity/">12. Escalation with Integrity **</a></li>
-<li><a href="patterns/013-incentive-alignment/">13. Incentive Alignment **</a></li>
-<li><a href="patterns/014-patch-management/">14. Patch Management **</a></li>
-<li><a href="patterns/015-explicit-coordination-mechanisms/">15. Explicit Coordination Mechanisms *</a></li>
-<li><a href="patterns/016-multidisciplinary-team/">16. Multidisciplinary Team **</a></li>
-<li><a href="patterns/017-service-standard/">17. Service Standard **</a></li>
+<li>
+<p><strong>Healthcare.gov rescue (2013)</strong>: When Healthcare.gov collapsed on launch day, the White House brought in Mikey Dickerson (Google), Todd Park, and Jeff Zients with explicit authority to override existing decision-making structures. Dickerson's war room operated under three rules: no finger-pointing, knowledge determines who talks, and only critical issues merit discussion. Within weeks, the system could handle 35,000 concurrent users. The rescue succeeded because someone with technical depth had positional authority to make real-time decisions. The original launch failed in part because TurningPoint's 11 risk reports had no enforcement mechanism — CMS could ignore them without consequence.</p>
+</li>
+<li>
+<p><strong>Boeing 737 MAX (2018-2019)</strong>: The absence of this pattern. Internal Boeing communications showed engineers raising concerns about MCAS, but commercial and schedule pressures overrode engineering judgment. The decision-making structure allowed executives optimising for certification timeline to override safety engineers on technical matters. Congressional investigation found that the organisation's incentive structure rewarded on-time delivery over safety margins. The result was two crashes, 346 deaths, and a nearly two-year grounding. Embedded technical leadership with authority to halt certification would have prevented this.</p>
+</li>
+<li>
+<p><strong>UK Government Digital Service (2011-2015)</strong>: GDS placed delivery managers and technical architects within departmental projects with authority to escalate concerns to the Cabinet Office. These were not advisory roles — they could halt spending via spend controls if standards were being bypassed. The model worked because the embedded leaders had credibility (delivery experience), authority (backed by Cabinet Office), and proximity (embedded in departmental teams). Departments that attempted to bypass GDS standards faced immediate escalation and funding holds.</p>
+</li>
+<li>
+<p><strong>Google SRE embedded model</strong>: Google embeds Site Reliability Engineers within product teams with authority to enforce error budgets, including the authority to freeze feature development until reliability recovers. The SRE is not a consultant providing recommendations but an embedded leader with binding authority over production changes. This ensures that reliability concerns are addressed in real time rather than deferred or ignored. The model works because the SRE has both technical depth and structural authority.</p>
+</li>
 </ul>
-<h3 id="value-and-architecture">Value and Architecture<a class="headerlink" href="#value-and-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="patterns/018-progressive-rollout/">18. Progressive Rollout **</a> · AI</li>
-<li><a href="patterns/019-blast-radius-limitation/">19. Blast Radius Limitation **</a></li>
-<li><a href="patterns/020-deployment-pipeline/">20. Deployment Pipeline **</a></li>
-<li><a href="patterns/021-observability/">21. Observability **</a> · AI</li>
-<li><a href="patterns/022-circuit-breaker/">22. Circuit Breaker **</a></li>
-<li><a href="patterns/023-explicit-service-boundary/">23. Explicit Service Boundary **</a></li>
-<li><a href="patterns/024-rollback-capability/">24. Rollback Capability **</a></li>
-<li><a href="patterns/025-immutable-infrastructure/">25. Immutable Infrastructure **</a></li>
-<li><a href="patterns/026-asset-inventory/">26. Asset Inventory **</a> · AI</li>
-<li><a href="patterns/027-defence-in-depth/">27. Defence in Depth **</a></li>
-<li><a href="patterns/028-graceful-degradation/">28. Graceful Degradation **</a></li>
-<li><a href="patterns/029-incremental-migration/">29. Incremental Migration **</a></li>
-<li><a href="patterns/030-irreversible-action-boundary/">30. Irreversible Action Boundary **</a></li>
-<li><a href="patterns/031-production-faithful-test-environment/">31. Production-Faithful Test Environment **</a></li>
-<li><a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/">32. Alerting on the Alerts (Dead Man's Switch) *</a></li>
-<li><a href="patterns/033-kill-switch/">33. Kill Switch **</a></li>
+<li>Marty Cagan, <em>Empowered: Ordinary People, Extraordinary Products</em> (Wiley, 2020) — on empowered engineering leadership</li>
+<li>UK Government Digital Service, documentation of delivery manager and technical architect roles (2011-2015)</li>
+<li>Betsy Beyer, Chris Jones, Jennifer Petoff, Niall Richard Murphy, eds., <em>Site Reliability Engineering: How Google Runs Production Systems</em> (O'Reilly, 2016) — embedded SRE model</li>
+<li>4sight Health, "HealthCare.Gov's Death-Defying 2013 Launch" — detailed account of rescue team structure and authority</li>
+<li>US House Committee on Transportation and Infrastructure, "Final Committee Report: The Design, Development &amp; Certification of the Boeing 737 MAX" (September 2020)</li>
+<li>GAO report on Healthcare.gov (documenting TurningPoint's 11 unheeded risk reports)</li>
+<li>US Senate Committee on Commerce, Science, and Transportation, "A 'Kill Chain' Analysis of the 2013 Target Data Breach" (March 2014) — on absent technical oversight</li>
 </ul>
-<h3 id="development-practices">Development Practices<a class="headerlink" href="#development-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/034-blameless-post-incident-review/">34. Blameless Post-Incident Review **</a> · AI</li>
-<li><a href="patterns/035-contract-first-integration/">35. Contract-First Integration **</a></li>
-<li><a href="patterns/036-incident-response-procedure/">36. Incident Response Procedure **</a></li>
-<li><a href="patterns/037-open-incident-communication/">37. Open Incident Communication **</a></li>
-<li><a href="patterns/038-rollback-first-recovery/">38. Rollback-First Recovery **</a></li>
-<li><a href="patterns/039-chaos-engineering/">39. Chaos Engineering **</a></li>
-<li><a href="patterns/040-service-level-objective/">40. Service Level Objective **</a></li>
-<li><a href="patterns/041-stress-testing/">41. Stress Testing **</a> · AI</li>
-<li><a href="patterns/042-small-batches/">42. Small Batches **</a></li>
-<li><a href="patterns/043-concurrent-incident-separation/">43. Concurrent Incident Separation *</a></li>
-<li><a href="patterns/044-continuous-integration-with-comprehensive-tests/">44. Continuous Integration with Comprehensive Tests **</a></li>
-<li><a href="patterns/045-corrective-action-integration-into-delivery/">45. Corrective Action Integration into Delivery *</a></li>
-<li><a href="patterns/046-cutover-rehearsal/">46. Cutover Rehearsal **</a></li>
-<li><a href="patterns/047-iterative-delivery/">47. Iterative Delivery **</a></li>
-<li><a href="patterns/048-legacy-integration-risk-treatment/">48. Legacy Integration Risk Treatment *</a></li>
-<li><a href="patterns/049-load-testing-as-engineering-practice/">49. Load Testing as Engineering Practice *</a></li>
-<li><a href="patterns/050-user-research-as-a-continuous-practice/">50. User Research as a Continuous Practice *</a></li>
-<li><a href="patterns/051-verified-recovery/">51. Verified Recovery **</a></li>
-</ul>
-<h3 id="delivery-pipeline">Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/052-continuous-vulnerability-scanning/">52. Continuous Vulnerability Scanning **</a> · AI</li>
-<li><a href="patterns/053-dead-code-removal/">53. Dead Code Removal **</a> · AI</li>
-<li><a href="patterns/054-deployment-verification/">54. Deployment Verification **</a></li>
-<li><a href="patterns/055-branch-based-testing/">55. Branch-Based Testing *</a></li>
-<li><a href="patterns/056-certificate-and-secret-lifecycle-management/">56. Certificate and Secret Lifecycle Management *</a></li>
-<li><a href="patterns/057-ephemeral-build-environment/">57. Ephemeral Build Environment *</a></li>
-<li><a href="patterns/058-feature-flag-lifecycle-management/">58. Feature Flag Lifecycle Management **</a></li>
-<li><a href="patterns/059-principle-of-least-privilege/">59. Principle of Least Privilege **</a></li>
-<li><a href="patterns/060-reproducible-build/">60. Reproducible Build **</a></li>
-<li><a href="patterns/061-software-bill-of-materials/">61. Software Bill of Materials **</a> · AI</li>
-<li><a href="patterns/062-transitive-dependency-awareness/">62. Transitive Dependency Awareness *</a> · AI</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Confidence ratings follow Alexander's convention:</p>
-<ul>
-<li><strong>**</strong> — the author believes this is an invariant</li>
-<li><strong>*</strong> — likely true but the form is uncertain</li>
-<li><strong>no star</strong> — a hypothesis</li>
-</ul>
-<p>Patterns marked <strong>AI</strong> have their forces meaningfully modified by AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2451,10 +2415,10 @@ and operate software. Following Christopher Alexander's methodology.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

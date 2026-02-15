@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../047-iterative-delivery/">
       
-        <link rel="next" href="patterns/001-blast-radius-based-investment/">
+      
+        <link rel="next" href="../049-load-testing-as-engineering-practice/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>48. Legacy Integration Risk Treatment - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-pattern-language-for-devops" class="md-skip">
+        <a href="#legacy-integration-risk-treatment" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              48. Legacy Integration Risk Treatment
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,37 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -277,109 +252,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns by Scale
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patterns by Scale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Philosophy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -400,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -427,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -473,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -501,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -529,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -557,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -585,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -613,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -641,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -669,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -697,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/010-embedded-technical-leadership/" class="md-nav__link">
+      <a href="../010-embedded-technical-leadership/" class="md-nav__link">
         
   
   
@@ -725,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -753,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -781,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -809,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -837,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -865,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -893,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -921,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -949,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -977,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -1005,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -1033,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -1061,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -1089,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/024-rollback-capability/" class="md-nav__link">
+      <a href="../024-rollback-capability/" class="md-nav__link">
         
   
   
@@ -1117,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1145,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1173,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/027-defence-in-depth/" class="md-nav__link">
+      <a href="../027-defence-in-depth/" class="md-nav__link">
         
   
   
@@ -1201,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1229,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1257,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1285,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1313,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1341,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1369,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1397,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1425,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1453,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/037-open-incident-communication/" class="md-nav__link">
+      <a href="../037-open-incident-communication/" class="md-nav__link">
         
   
   
@@ -1481,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1509,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1537,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1565,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1593,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1621,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1677,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1705,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1733,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1758,10 +1630,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    48. Legacy Integration Risk Treatment
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1777,6 +1676,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1789,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1817,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1845,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1873,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1901,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1929,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1957,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/055-branch-based-testing/" class="md-nav__link">
+      <a href="../055-branch-based-testing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2013,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -2041,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2069,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -2097,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -2125,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2153,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2208,22 +2205,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
+  <a href="#forces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns by Scale
+        Forces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Patterns by Scale">
+    <nav class="md-nav" aria-label="Forces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
+  <a href="#how-the-forces-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Philosophy
+        How the forces apply
       
     </span>
   </a>
@@ -2231,43 +2228,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
+  <a href="#scarcity-constraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
+        Scarcity constraint
       
     </span>
   </a>
@@ -2280,10 +2244,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#real-world-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2307,103 +2299,74 @@
 
 
 
-<h1 id="a-pattern-language-for-devops">A Pattern Language for DevOps<a class="headerlink" href="#a-pattern-language-for-devops" title="Permanent link">&para;</a></h1>
-<p>A pattern language for how software engineering organisations build, deliver,
-and operate software. Following Christopher Alexander's methodology.</p>
-<p>AI is not a section. It is a force present at every level.</p>
-<p><img alt="Pattern Graph" loading="lazy" src="assets/pattern-graph.svg" /></p>
-<h2 id="patterns-by-scale">Patterns by Scale<a class="headerlink" href="#patterns-by-scale" title="Permanent link">&para;</a></h2>
-<h3 id="organisational-philosophy">Organisational Philosophy<a class="headerlink" href="#organisational-philosophy" title="Permanent link">&para;</a></h3>
+<h1 id="legacy-integration-risk-treatment">Legacy Integration Risk Treatment *<a class="headerlink" href="#legacy-integration-risk-treatment" title="Permanent link">&para;</a></h1>
+<p><em>When <strong>Explicit Service Boundary (23)</strong> defines where system boundaries exist and <strong>Incremental Migration (29)</strong> creates long-lived boundaries between new and legacy systems, the integration points concentrate more risk than the new code itself, yet organisations habitually under-invest in testing and monitoring these boundaries.</em></p>
+<hr />
+<p><strong>Most large-scale system rebuilds do not replace everything at once. The new system must coexist with surviving legacy components — databases that cannot be migrated in a single cutover, third-party systems that cannot be replaced, mainframes that are too risky to decommission. The integration boundaries between new and legacy become the most dangerous parts of the system. The new code is clean, tested, and well-understood. The legacy code is opaque, poorly documented, and full of implicit assumptions. The boundary is where the organisation's ignorance is concentrated: assumptions about data formats that were never written down, error handling behaviors that depend on undocumented retry logic, performance characteristics that degrade under loads that were never tested. When the new system goes live, failures cluster at these boundaries. Yet organisations habitually invest most testing effort in the new code and assume that legacy integrations will work because "they've been running for years."</strong></p>
+<hr />
+<p>TSB Bank's April 2018 migration disaster illustrates the pattern's absence. TSB migrated 5.4 million customer accounts from Lloyds' legacy platform to Sabadell's Proteo4UK in a single weekend cutover. The migration failed catastrophically. Customers could not log in, saw other people's accounts, had incorrect balances. Problems persisted for weeks. The independent review found that integration testing between the new platform and retained legacy components was insufficient. Test environments did not accurately reflect production. The team underestimated the complexity of the legacy integration points. The migration proceeded despite warnings. The cost exceeded £330 million and led to regulatory fines and executive resignations.</p>
+<p>The pattern inverts the usual testing investment. Instead of treating legacy integrations as low-risk because they are "already working," the pattern identifies every integration boundary between new and legacy systems and treats each as a high-risk zone requiring disproportionate investment. Contract tests specify and verify the exact behavior expected at the boundary. Integration tests exercise the full path through both systems. Continuous testing runs these tests repeatedly, including under realistic load, to catch degradation early. Each boundary has assigned owners — people who understand both the new system and the legacy component it integrates with — which is scarce expertise because most engineers understand only one side.</p>
+<p>The boundary also receives more granular monitoring than either system independently. Latency, error rates, retry behavior, timeout handling, and data format mismatches are instrumented at the boundary. This monitoring catches issues that are invisible when looking at either system alone: the new system is responding correctly, the legacy system is responding correctly, but the integration between them is failing because an assumption about timing or format is violated.</p>
+<p>Michael Feathers's <em>Working Effectively with Legacy Code</em> introduced the characterization test: a test that captures the legacy system's actual behavior, even when that behavior is buggy, so that changes can be made without accidentally altering behavior. For legacy integrations, characterization tests document the boundary's actual behavior: what data formats are actually used (not what the documentation says), what error codes are actually returned, what retry logic is actually executed. These tests become the specification of the integration, allowing the new system to integrate correctly even when the legacy system's behavior is poorly understood.</p>
+<p>Eric Evans's Domain-Driven Design introduced the anti-corruption layer: a boundary layer that translates between the legacy system's model and the new system's model, preventing legacy assumptions from infecting the new codebase. The anti-corruption layer is where disproportionate investment concentrates: it contains the logic that handles legacy idiosyncrasies, transforms data formats, and isolates the new system from the legacy's technical debt. This isolation is valuable: it allows the new system to be clean even when the legacy system is not.</p>
+<p><strong>Incremental Migration (29)</strong> is the architectural strategy that makes this pattern necessary. When migration is incremental, legacy integration boundaries exist for months or years. <strong>Production-Faithful Test Environment (31)</strong> provides the environment where integration tests can validate boundary behavior under realistic conditions. <strong>Cutover Rehearsal (46)</strong> validates the full migration path, including boundary behavior, before production cutover. When integration testing reveals unresolved risks, the organisation needs clear authority to halt the migration rather than press forward under schedule pressure. <strong>Rollback Capability (24)</strong> provides the safety mechanism when boundaries fail in production.</p>
+<p>The cost is that building contract tests for poorly documented legacy systems is difficult. The legacy system's behavior may be inconsistent, undocumented, or dependent on environmental factors that are hard to reproduce. Assigning boundary ownership requires scarce people with expertise in both old and new systems — often the same senior engineers who are most in demand elsewhere. The disproportionate investment means less investment in other areas. But the alternative — treating legacy integration as low-risk and discovering failures during cutover — is more expensive.</p>
+<p>Therefore:</p>
+<p><strong>The team explicitly identifies every integration boundary between the new system and surviving legacy components. Each boundary is treated as a high-risk zone requiring disproportionate investment. Contract tests specify and continuously verify the exact behavior expected at the boundary: data formats, error codes, timeout handling, retry logic, performance characteristics. Integration tests exercise the full path through both systems under realistic load. Characterization tests document the legacy system's actual behavior, even when that behavior is undocumented or inconsistent. Each boundary has assigned owners — individuals who understand both the new system and the legacy component — responsible for maintaining boundary integrity. Monitoring is more granular at boundaries than elsewhere: latency, error rates, data format mismatches, and retry behavior are instrumented. An anti-corruption layer isolates the new system from legacy assumptions, translating between the legacy model and the new model. The boundary layer is tested and reviewed with greater rigor than either system independently. Integration testing begins early, runs continuously, and exercises failure modes that are unlikely in either system alone but probable at the boundary.</strong></p>
+<hr />
+<p><em>Legacy Integration Risk Treatment applies where <strong>Explicit Service Boundary (23)</strong> defines the interfaces legacy must connect through and <strong>Incremental Migration (29)</strong> creates long-lived boundaries between new and legacy systems. <strong>Contract-First Integration (35)</strong> specifies and validates the contracts at these integration boundaries, ensuring both sides agree on data formats, error handling, and performance expectations. <strong>Cutover Rehearsal (46)</strong> validates the full migration path, including boundary behavior, before production cutover.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/001-blast-radius-based-investment/">1. Blast Radius-Based Investment **</a> · AI</li>
-<li><a href="patterns/002-working-in-the-open/">2. Working in the Open **</a></li>
-<li><a href="patterns/003-progressive-trust/">3. Progressive Trust *</a> · AI</li>
-<li><a href="patterns/004-shared-ownership-of-production/">4. Shared Ownership of Production **</a></li>
-<li><a href="patterns/005-content-as-code/">5. Content as Code *</a> · AI</li>
-<li><a href="patterns/006-design-principles-as-alignment-mechanism/">6. Design Principles as Alignment Mechanism **</a></li>
-<li><a href="patterns/007-knowledge-based-authority/">7. Knowledge-Based Authority *</a></li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: This is the primary force. Legacy systems are incomprehensible: their behavior is the cumulative result of decades of undocumented changes, implicit assumptions, and environmental dependencies. The full scope of what the legacy system does exceeds anyone's understanding. The pattern reduces scope to the boundary: the team does not need to comprehend the legacy system's internals, only its behavior at the integration points. Contract tests and characterization tests make the boundary comprehensible by documenting actual behavior. The cost is that defining comprehensive boundary contracts requires observing the legacy system's behavior under diverse conditions, which can take months.</p>
+</li>
+<li>
+<p><strong>Speed vs Safety</strong>: Treating boundaries as high-risk slows initial development: contract tests must be written, integration tests must run, monitoring must be instrumented. This investment delays the first integration. But it makes cutover safer: when the new system goes live, boundary behavior is well-understood and validated. The pattern trades early speed for late-stage safety. TSB's migration attempted speed (single weekend cutover) without boundary safety (insufficient integration testing), and the result was weeks of operational failures.</p>
+</li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: Contract tests impose determinism: the boundary behavior is specified and verified mechanically. This determinism protects the new system from unexpected legacy behavior. But legacy systems are often non-deterministic: their behavior varies with load, timing, environmental factors. The pattern handles this through adaptive monitoring and testing: tests exercise the boundary under diverse conditions, monitoring detects when behavior diverges from expectations, and the anti-corruption layer handles legacy inconsistencies adaptively.</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong>: Teams building new systems want autonomy to design clean architectures without legacy constraints. But alignment with legacy behavior is required for integration to work. The pattern resolves this through the anti-corruption layer: the new system maintains autonomy behind the layer (clean models, modern patterns), while the layer provides alignment at the boundary (handles legacy idiosyncrasies, translates between models). This isolation allows the new system to evolve independently while maintaining integration.</p>
+</li>
 </ul>
-<h3 id="organisational-structure">Organisational Structure<a class="headerlink" href="#organisational-structure" title="Permanent link">&para;</a></h3>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Legacy integration risk treatment requires scarce dual-expertise people: engineers who understand both the new system and the legacy component. These individuals are rare because legacy expertise is concentrated in long-tenured staff who may not know modern practices, while new system expertise is in engineers who never worked on the legacy. Finding or developing people who understand both is expensive and time-consuming. The pattern also requires tooling investment: contract testing frameworks, integration test environments that replicate legacy behavior, monitoring infrastructure that instruments boundaries. The political challenge is justifying disproportionate investment in "boring" integration work rather than visible new features. The investment is preventative: it avoids catastrophic cutover failures, but the value is measured by the absence of disasters, which is hard to communicate to stakeholders who have not experienced legacy migration failures.</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/008-platform-team/">8. Platform Team **</a> · AI</li>
-<li><a href="patterns/009-team-aligned-architecture/">9. Team-Aligned Architecture **</a></li>
-<li><a href="patterns/010-embedded-technical-leadership/">10. Embedded Technical Leadership **</a></li>
-<li><a href="patterns/011-error-budget/">11. Error Budget **</a></li>
-<li><a href="patterns/012-escalation-with-integrity/">12. Escalation with Integrity **</a></li>
-<li><a href="patterns/013-incentive-alignment/">13. Incentive Alignment **</a></li>
-<li><a href="patterns/014-patch-management/">14. Patch Management **</a></li>
-<li><a href="patterns/015-explicit-coordination-mechanisms/">15. Explicit Coordination Mechanisms *</a></li>
-<li><a href="patterns/016-multidisciplinary-team/">16. Multidisciplinary Team **</a></li>
-<li><a href="patterns/017-service-standard/">17. Service Standard **</a></li>
+<li>
+<p><strong>The migration with no way back (TSB Bank, April 2018)</strong>: TSB's migration from Lloyds' legacy platform to Proteo4UK failed because integration testing between the new platform and retained legacy components was insufficient. Test environments did not match production. The migration proceeded despite material deficiencies flagged by independent review. On cutover weekend, integration failures cascaded: customers could not log in, accounts displayed incorrectly, direct debits failed. The cost exceeded £330 million. An independent review found that insufficient integration testing was a primary cause. Legacy Integration Risk Treatment — disproportionate investment in boundary testing, production-faithful integration environments, assigned boundary owners — would have surfaced these failures during testing rather than at cutover.</p>
+</li>
+<li>
+<p><strong>Strangler Fig pattern (Martin Fowler, 2004)</strong>: Fowler's Strangler Fig pattern codifies incremental replacement of legacy systems by routing traffic progressively from legacy to new components. The pattern explicitly treats integration boundaries as risky: new components must integrate with legacy during the transition. Success requires careful boundary testing, gradual rollout, and monitoring to detect integration failures early. Organizations applying the pattern invest heavily in integration testing and rollback capability, which aligns with Legacy Integration Risk Treatment principles.</p>
+</li>
+<li>
+<p><strong>Anti-Corruption Layer (Evans, 2003)</strong>: Eric Evans's Domain-Driven Design introduced the anti-corruption layer as a boundary between legacy and new systems. The layer translates between the legacy model and the new model, preventing legacy assumptions from polluting new code. The pattern has been widely adopted in legacy modernization efforts. Organizations report that isolating legacy complexity in a boundary layer allows new systems to remain clean while maintaining integration. This aligns with the principle of disproportionate investment at boundaries.</p>
+</li>
+<li>
+<p><strong>UK Government legacy modernization (2010s)</strong>: GDS rebuilt multiple legacy government services using incremental migration strategies. Services like GOV.UK integrated with legacy systems that could not be replaced immediately. GDS invested heavily in integration testing, API contracts, and monitoring at boundaries. The approach succeeded where previous "big bang" replacement attempts had failed. The success was attributed to treating integration boundaries as high-risk zones requiring dedicated expertise and continuous testing.</p>
+</li>
 </ul>
-<h3 id="value-and-architecture">Value and Architecture<a class="headerlink" href="#value-and-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="patterns/018-progressive-rollout/">18. Progressive Rollout **</a> · AI</li>
-<li><a href="patterns/019-blast-radius-limitation/">19. Blast Radius Limitation **</a></li>
-<li><a href="patterns/020-deployment-pipeline/">20. Deployment Pipeline **</a></li>
-<li><a href="patterns/021-observability/">21. Observability **</a> · AI</li>
-<li><a href="patterns/022-circuit-breaker/">22. Circuit Breaker **</a></li>
-<li><a href="patterns/023-explicit-service-boundary/">23. Explicit Service Boundary **</a></li>
-<li><a href="patterns/024-rollback-capability/">24. Rollback Capability **</a></li>
-<li><a href="patterns/025-immutable-infrastructure/">25. Immutable Infrastructure **</a></li>
-<li><a href="patterns/026-asset-inventory/">26. Asset Inventory **</a> · AI</li>
-<li><a href="patterns/027-defence-in-depth/">27. Defence in Depth **</a></li>
-<li><a href="patterns/028-graceful-degradation/">28. Graceful Degradation **</a></li>
-<li><a href="patterns/029-incremental-migration/">29. Incremental Migration **</a></li>
-<li><a href="patterns/030-irreversible-action-boundary/">30. Irreversible Action Boundary **</a></li>
-<li><a href="patterns/031-production-faithful-test-environment/">31. Production-Faithful Test Environment **</a></li>
-<li><a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/">32. Alerting on the Alerts (Dead Man's Switch) *</a></li>
-<li><a href="patterns/033-kill-switch/">33. Kill Switch **</a></li>
+<li>Michael Feathers, <em>Working Effectively with Legacy Code</em> (Prentice Hall, 2004) — characterization tests and legacy integration strategies</li>
+<li>Eric Evans, <em>Domain-Driven Design: Tackling Complexity in the Heart of Software</em> (Addison-Wesley, 2003), Chapter 14 on Anti-Corruption Layer</li>
+<li>Sam Newman, <em>Monolith to Microservices: Evolutionary Patterns to Transform Your Monolith</em> (O'Reilly, 2019), Chapter 3 on splitting monoliths and managing integration boundaries</li>
+<li>Martin Fowler, "StranglerFigApplication" (martinfowler.com, 2004) — pattern for incremental legacy replacement</li>
+<li>Slaughter and May, "Independent Review of the TSB IT Migration" (November 2019) — commissioned by TSB board, comprehensive analysis of migration failure</li>
+<li>Financial Conduct Authority, "FCA fines TSB £48,650,000 for operational resilience failings" (December 2022)</li>
 </ul>
-<h3 id="development-practices">Development Practices<a class="headerlink" href="#development-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/034-blameless-post-incident-review/">34. Blameless Post-Incident Review **</a> · AI</li>
-<li><a href="patterns/035-contract-first-integration/">35. Contract-First Integration **</a></li>
-<li><a href="patterns/036-incident-response-procedure/">36. Incident Response Procedure **</a></li>
-<li><a href="patterns/037-open-incident-communication/">37. Open Incident Communication **</a></li>
-<li><a href="patterns/038-rollback-first-recovery/">38. Rollback-First Recovery **</a></li>
-<li><a href="patterns/039-chaos-engineering/">39. Chaos Engineering **</a></li>
-<li><a href="patterns/040-service-level-objective/">40. Service Level Objective **</a></li>
-<li><a href="patterns/041-stress-testing/">41. Stress Testing **</a> · AI</li>
-<li><a href="patterns/042-small-batches/">42. Small Batches **</a></li>
-<li><a href="patterns/043-concurrent-incident-separation/">43. Concurrent Incident Separation *</a></li>
-<li><a href="patterns/044-continuous-integration-with-comprehensive-tests/">44. Continuous Integration with Comprehensive Tests **</a></li>
-<li><a href="patterns/045-corrective-action-integration-into-delivery/">45. Corrective Action Integration into Delivery *</a></li>
-<li><a href="patterns/046-cutover-rehearsal/">46. Cutover Rehearsal **</a></li>
-<li><a href="patterns/047-iterative-delivery/">47. Iterative Delivery **</a></li>
-<li><a href="patterns/048-legacy-integration-risk-treatment/">48. Legacy Integration Risk Treatment *</a></li>
-<li><a href="patterns/049-load-testing-as-engineering-practice/">49. Load Testing as Engineering Practice *</a></li>
-<li><a href="patterns/050-user-research-as-a-continuous-practice/">50. User Research as a Continuous Practice *</a></li>
-<li><a href="patterns/051-verified-recovery/">51. Verified Recovery **</a></li>
-</ul>
-<h3 id="delivery-pipeline">Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/052-continuous-vulnerability-scanning/">52. Continuous Vulnerability Scanning **</a> · AI</li>
-<li><a href="patterns/053-dead-code-removal/">53. Dead Code Removal **</a> · AI</li>
-<li><a href="patterns/054-deployment-verification/">54. Deployment Verification **</a></li>
-<li><a href="patterns/055-branch-based-testing/">55. Branch-Based Testing *</a></li>
-<li><a href="patterns/056-certificate-and-secret-lifecycle-management/">56. Certificate and Secret Lifecycle Management *</a></li>
-<li><a href="patterns/057-ephemeral-build-environment/">57. Ephemeral Build Environment *</a></li>
-<li><a href="patterns/058-feature-flag-lifecycle-management/">58. Feature Flag Lifecycle Management **</a></li>
-<li><a href="patterns/059-principle-of-least-privilege/">59. Principle of Least Privilege **</a></li>
-<li><a href="patterns/060-reproducible-build/">60. Reproducible Build **</a></li>
-<li><a href="patterns/061-software-bill-of-materials/">61. Software Bill of Materials **</a> · AI</li>
-<li><a href="patterns/062-transitive-dependency-awareness/">62. Transitive Dependency Awareness *</a> · AI</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Confidence ratings follow Alexander's convention:</p>
-<ul>
-<li><strong>**</strong> — the author believes this is an invariant</li>
-<li><strong>*</strong> — likely true but the form is uncertain</li>
-<li><strong>no star</strong> — a hypothesis</li>
-</ul>
-<p>Patterns marked <strong>AI</strong> have their forces meaningfully modified by AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2451,10 +2414,10 @@ and operate software. Following Christopher Alexander's methodology.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

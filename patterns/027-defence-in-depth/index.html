@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../026-asset-inventory/">
       
-        <link rel="next" href="patterns/001-blast-radius-based-investment/">
+      
+        <link rel="next" href="../028-graceful-degradation/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>27. Defence in Depth - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-pattern-language-for-devops" class="md-skip">
+        <a href="#defence-in-depth" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              27. Defence in Depth
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,37 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -277,109 +252,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns by Scale
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patterns by Scale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Philosophy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -400,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -427,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -473,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -501,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -529,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -557,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -585,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -613,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -641,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -669,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -697,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/010-embedded-technical-leadership/" class="md-nav__link">
+      <a href="../010-embedded-technical-leadership/" class="md-nav__link">
         
   
   
@@ -725,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -753,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -781,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -809,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -837,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -865,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -893,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -921,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -949,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -977,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -1005,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -1033,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -1061,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -1089,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/024-rollback-capability/" class="md-nav__link">
+      <a href="../024-rollback-capability/" class="md-nav__link">
         
   
   
@@ -1117,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1145,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1170,10 +1042,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patterns/027-defence-in-depth/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    27. Defence in Depth
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1189,6 +1088,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1201,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1229,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1257,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1285,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1313,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1341,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1369,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1397,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1425,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1453,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/037-open-incident-communication/" class="md-nav__link">
+      <a href="../037-open-incident-communication/" class="md-nav__link">
         
   
   
@@ -1481,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1509,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1537,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1565,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1593,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1621,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1677,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1705,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1733,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1761,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+      <a href="../048-legacy-integration-risk-treatment/" class="md-nav__link">
         
   
   
@@ -1789,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1817,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1845,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1873,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1901,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1929,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1957,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/055-branch-based-testing/" class="md-nav__link">
+      <a href="../055-branch-based-testing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2013,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -2041,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2069,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -2097,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -2125,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2153,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2208,22 +2205,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
+  <a href="#forces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns by Scale
+        Forces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Patterns by Scale">
+    <nav class="md-nav" aria-label="Forces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
+  <a href="#how-the-forces-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Philosophy
+        How the forces apply
       
     </span>
   </a>
@@ -2231,43 +2228,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
+  <a href="#scarcity-constraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
+        Scarcity constraint
       
     </span>
   </a>
@@ -2280,10 +2244,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#real-world-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2307,103 +2299,72 @@
 
 
 
-<h1 id="a-pattern-language-for-devops">A Pattern Language for DevOps<a class="headerlink" href="#a-pattern-language-for-devops" title="Permanent link">&para;</a></h1>
-<p>A pattern language for how software engineering organisations build, deliver,
-and operate software. Following Christopher Alexander's methodology.</p>
-<p>AI is not a section. It is a force present at every level.</p>
-<p><img alt="Pattern Graph" loading="lazy" src="assets/pattern-graph.svg" /></p>
-<h2 id="patterns-by-scale">Patterns by Scale<a class="headerlink" href="#patterns-by-scale" title="Permanent link">&para;</a></h2>
-<h3 id="organisational-philosophy">Organisational Philosophy<a class="headerlink" href="#organisational-philosophy" title="Permanent link">&para;</a></h3>
+<h1 id="defence-in-depth">Defence in Depth **<a class="headerlink" href="#defence-in-depth" title="Permanent link">&para;</a></h1>
+<p><em>When <strong>Blast Radius-Based Investment (1)</strong> has identified which systems carry the highest consequence and <strong>Patch Management (14)</strong> maintains the discipline of keeping controls current, security must be implemented as multiple independent overlapping layers rather than relying on any single control.</em></p>
+<hr />
+<p><strong>Every security control can fail. Firewalls are misconfigured. Passwords are stolen. Encryption keys are leaked. Intrusion detection systems miss novel attacks. Human operators ignore alerts. Software contains zero-day vulnerabilities. If the organisation depends on any single control to prevent or detect a breach, a failure of that control results in total exposure. The attacker needs to defeat one layer; the defender needs every layer to work perfectly.</strong></p>
+<hr />
+<p>The concept of defence in depth comes from military strategy: a defensive position with multiple fallback lines is harder to overrun than one protected by a single fortification. In cybersecurity, the principle was codified by the US National Security Agency in 2000 as "a practical strategy for achieving information assurance in today's highly networked environments." The insight is structural: adversaries are adaptive, persistent, and well-resourced. They probe defences until they find a weakness. A single-layer defence guarantees that when the weakness is found, the organisation is compromised. Multiple overlapping layers mean that attackers must defeat several independent controls, and defenders have multiple opportunities to detect and respond.</p>
+<p>James Reason's Swiss cheese model formalizes this. Each defensive layer is a slice of cheese with holes representing weaknesses. The holes are never in the same place: a weakness in the firewall is not a weakness in encryption, a misconfiguration in access control is not a failure of monitoring. When layers are aligned randomly, an attack path must thread through all the holes simultaneously — a much harder task than penetrating a single layer. The model also explains why single points of failure are so dangerous: when one layer has a hole big enough that it does not matter what the other layers do, defence in depth collapses.</p>
+<p>The Target breach of 2013 demonstrates both the value and the failure of defence in depth. Attackers gained initial access using stolen credentials from Fazio Mechanical Services, an HVAC contractor with remote access to Target's network for billing purposes. The first failure: third-party vendor access was not isolated from internal corporate networks. The second failure: network segmentation did not separate vendor access, corporate systems, and payment infrastructure. Attackers moved laterally across these networks and deployed RAM-scraping malware on point-of-sale terminals. The third failure: FireEye malware detection generated alerts about the malicious activity, but the security team in Bangalore forwarded them to Minneapolis, where they were not acted upon. The fourth failure: the automated malware removal capability was configured but disabled. Four layers existed, four layers failed, and 40 million payment card records and 70 million customer records were exfiltrated.</p>
+<p>After the breach, Target invested over $200 million in defence in depth: network segmentation to isolate vendor access from payment systems, dedicated CISO reporting to the board, rebuilt security operations centre (the Cyber Fusion Center), chip-and-PIN card readers, and enhanced vendor access monitoring. Each layer addresses a different failure mode: segmentation limits lateral movement even when initial access is gained, monitoring detects anomalous activity even when perimeter defences fail, physical card encryption protects data even when malware is present on terminals. The layers overlap: an attacker who defeats one encounters another.</p>
+<p>The cost of defence in depth is operational complexity. Each layer adds infrastructure to maintain, policies to enforce, and interfaces between layers that can themselves fail. A defence-in-depth architecture has more moving parts than a single-control architecture, and more parts mean more potential failure modes. Monitoring must span layers: an alert from one layer may require correlating with data from another. Incident response becomes harder: when a breach occurs, the team must understand which layers failed, why, and whether other layers contained the damage. This complexity is the price of resilience.</p>
+<p>Defence in depth also has diminishing returns. The first layer — perimeter firewall — stops the majority of unsophisticated attacks. The second layer — host-based firewalls and access controls — stops attackers who penetrate the perimeter. The third layer — encrypted data at rest — protects even if attackers gain access to storage. Each subsequent layer provides smaller marginal benefit while adding similar marginal cost. The organisation must decide how many layers are enough, and that decision depends on risk tolerance, adversary capability, and regulatory requirements. A consumer web application may tolerate two or three layers. A financial institution processing billions of dollars in transactions needs five or six. A national security system needs more.</p>
+<p>Therefore:</p>
+<p><strong>Security is implemented as multiple independent overlapping layers, each addressing a different failure mode. Perimeter controls limit initial access; network segmentation contains lateral movement; access controls enforce least privilege; encryption protects data at rest and in transit; monitoring detects anomalous behaviour; incident response remediates breaches. No single layer is trusted to work perfectly; each layer assumes that other layers may fail. The layers are independent: a failure in one does not disable others. Monitoring spans layers: alerts from one layer are correlated with data from other layers to detect multi-stage attacks. The organisation invests in depth proportional to the consequence of breach and the capability of adversaries it faces. Defence in depth is not a checklist of controls but an architectural principle: assume breach, limit blast radius, detect and respond.</strong></p>
+<hr />
+<p><em>This pattern is completed by <strong>Blast Radius Limitation (19)</strong>, which segments systems to contain breaches so that penetrating one layer does not grant access to the entire estate. <strong>Asset Inventory (26)</strong> ensures that every system within the layered defence is known and catalogued, because controls cannot protect assets that are invisible. <strong>Continuous Vulnerability Scanning (52)</strong> probes each layer for weaknesses before attackers do, ensuring that the defences remain effective as the threat landscape evolves. <strong>Certificate and Secret Lifecycle Management (56)</strong> prevents expired or compromised credentials from creating holes in defensive layers. <strong>Principle of Least Privilege (59)</strong> limits lateral movement after an initial breach by ensuring that each identity and process has only the minimum access required.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/001-blast-radius-based-investment/">1. Blast Radius-Based Investment **</a> · AI</li>
-<li><a href="patterns/002-working-in-the-open/">2. Working in the Open **</a></li>
-<li><a href="patterns/003-progressive-trust/">3. Progressive Trust *</a> · AI</li>
-<li><a href="patterns/004-shared-ownership-of-production/">4. Shared Ownership of Production **</a></li>
-<li><a href="patterns/005-content-as-code/">5. Content as Code *</a> · AI</li>
-<li><a href="patterns/006-design-principles-as-alignment-mechanism/">6. Design Principles as Alignment Mechanism **</a></li>
-<li><a href="patterns/007-knowledge-based-authority/">7. Knowledge-Based Authority *</a></li>
+<li>
+<p><strong>Speed vs Safety</strong>: This is a secondary force. Multiple security layers slow development and operations. Access controls require authentication, encryption adds latency, monitoring generates alerts that require investigation. Each layer imposes friction. But this friction is the cost of safety: without it, attackers move faster than defenders. The pattern resolves this not by eliminating friction but by making friction proportional to risk. High-consequence systems tolerate more layers; low-consequence systems tolerate fewer.</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong>: Teams need autonomy to choose tools and architectures. The organisation needs alignment on baseline security controls: all systems use encryption, all systems enforce access controls, all systems are monitored. Defence in depth requires alignment on which layers are mandatory and where teams have discretion. The pattern achieves this by mandating controls that protect the organisation while allowing teams to choose implementation.</p>
+</li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: Each additional layer expands the scope of what must be understood, maintained, and monitored. A single firewall is comprehensible; a defence-in-depth architecture with perimeter controls, network segmentation, host-based firewalls, application-level authentication, data encryption, and behavioural monitoring is not. The pattern trades comprehensibility for resilience: the system is harder to understand but also harder to compromise. This is acceptable when the adversary is sophisticated and persistent.</p>
+</li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: This is the primary force. Deterministic controls — firewalls with explicit rules, access control lists, encryption at rest — fail when attackers find novel paths that the rules do not cover. Adaptive controls — behavioural monitoring, anomaly detection, human analysis — detect novel attacks but generate false positives and require judgment. Defence in depth resolves this by combining both: deterministic layers stop known attacks quickly and cheaply; adaptive layers detect unknown attacks slowly and expensively. The combination is more robust than either alone.</p>
+</li>
 </ul>
-<h3 id="organisational-structure">Organisational Structure<a class="headerlink" href="#organisational-structure" title="Permanent link">&para;</a></h3>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Defence in depth requires investment in multiple overlapping systems, each of which must be maintained, updated, and monitored. The scarcest resource is <strong>attention</strong>, distributed across layers. Security teams must monitor alerts from firewalls, intrusion detection systems, access logs, and anomaly detection tools. Each layer generates signals that require analysis. When signals are uncorrelated, attention is fragmented: the team sees pieces of an attack across multiple systems but does not recognize the pattern. The second scarcity is <strong>expertise</strong>: understanding how layers interact, where gaps exist, and how to respond when multiple layers fail simultaneously. The third scarcity is <strong>cost</strong>: each layer has licensing, operational, and infrastructure costs. The organisation must decide which layers justify their cost and which do not. This decision is revisited as adversary capabilities evolve and new attack techniques emerge.</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/008-platform-team/">8. Platform Team **</a> · AI</li>
-<li><a href="patterns/009-team-aligned-architecture/">9. Team-Aligned Architecture **</a></li>
-<li><a href="patterns/010-embedded-technical-leadership/">10. Embedded Technical Leadership **</a></li>
-<li><a href="patterns/011-error-budget/">11. Error Budget **</a></li>
-<li><a href="patterns/012-escalation-with-integrity/">12. Escalation with Integrity **</a></li>
-<li><a href="patterns/013-incentive-alignment/">13. Incentive Alignment **</a></li>
-<li><a href="patterns/014-patch-management/">14. Patch Management **</a></li>
-<li><a href="patterns/015-explicit-coordination-mechanisms/">15. Explicit Coordination Mechanisms *</a></li>
-<li><a href="patterns/016-multidisciplinary-team/">16. Multidisciplinary Team **</a></li>
-<li><a href="patterns/017-service-standard/">17. Service Standard **</a></li>
+<li>
+<p><strong>Target breach (2013)</strong>: Attackers gained initial access through stolen credentials from a third-party HVAC vendor. Four defensive layers existed but all failed: network segmentation did not isolate vendor access from payment systems, allowing lateral movement; FireEye malware detection generated alerts but they were not acted upon; automated malware removal was configured but disabled; monitoring infrastructure had been non-functional for months due to an expired SSL certificate. The breach succeeded because every layer failed simultaneously. Post-incident, Target invested $200 million in defence in depth: network segmentation, dedicated CISO, rebuilt SOC, chip-and-PIN readers, and vendor access controls. Each layer addressed a different failure mode.</p>
+</li>
+<li>
+<p><strong>SolarWinds supply chain attack (2020)</strong>: Russian intelligence compromised SolarWinds' build pipeline, injecting malware into signed updates. Organisations with defence in depth fared better than those without. Perimeter controls did not help — the malware arrived as trusted updates. But network segmentation limited lateral movement after installation, monitoring detected anomalous outbound traffic, and access controls prevented the malware from compromising systems it could not authenticate to. The breach revealed that defence in depth must extend to the supply chain: trusted updates can be weaponized, so build integrity, SBOM verification, and anomaly detection on trusted software are necessary layers.</p>
+</li>
+<li>
+<p><strong>Equifax breach (2017)</strong>: An unpatched Apache Struts vulnerability allowed attackers to enter through the ACIS dispute portal. Network segmentation was insufficient: attackers moved laterally to core credit databases. Monitoring failed: an SSL certificate on the intrusion detection system had been expired for 19 months, rendering it non-functional. Encryption at rest was not applied to sensitive databases. The breach succeeded because the first layer failed (unpatched vulnerability) and subsequent layers did not contain the damage. Post-breach, Equifax invested in defence in depth: network segmentation, monitoring infrastructure health checks, encryption at rest, and asset inventory. CIS Control 1 (asset inventory) became a prerequisite for all other controls.</p>
+</li>
 </ul>
-<h3 id="value-and-architecture">Value and Architecture<a class="headerlink" href="#value-and-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="patterns/018-progressive-rollout/">18. Progressive Rollout **</a> · AI</li>
-<li><a href="patterns/019-blast-radius-limitation/">19. Blast Radius Limitation **</a></li>
-<li><a href="patterns/020-deployment-pipeline/">20. Deployment Pipeline **</a></li>
-<li><a href="patterns/021-observability/">21. Observability **</a> · AI</li>
-<li><a href="patterns/022-circuit-breaker/">22. Circuit Breaker **</a></li>
-<li><a href="patterns/023-explicit-service-boundary/">23. Explicit Service Boundary **</a></li>
-<li><a href="patterns/024-rollback-capability/">24. Rollback Capability **</a></li>
-<li><a href="patterns/025-immutable-infrastructure/">25. Immutable Infrastructure **</a></li>
-<li><a href="patterns/026-asset-inventory/">26. Asset Inventory **</a> · AI</li>
-<li><a href="patterns/027-defence-in-depth/">27. Defence in Depth **</a></li>
-<li><a href="patterns/028-graceful-degradation/">28. Graceful Degradation **</a></li>
-<li><a href="patterns/029-incremental-migration/">29. Incremental Migration **</a></li>
-<li><a href="patterns/030-irreversible-action-boundary/">30. Irreversible Action Boundary **</a></li>
-<li><a href="patterns/031-production-faithful-test-environment/">31. Production-Faithful Test Environment **</a></li>
-<li><a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/">32. Alerting on the Alerts (Dead Man's Switch) *</a></li>
-<li><a href="patterns/033-kill-switch/">33. Kill Switch **</a></li>
+<li>National Security Agency, "Defence in Depth: A Practical Strategy for Achieving Information Assurance in Today's Highly Networked Environments" (2000)</li>
+<li>James Reason, "Human error: models and management," <em>BMJ</em> 320 (2000): 768-770 — Swiss cheese model of organizational accidents</li>
+<li>NIST SP 800-53, Security and Privacy Controls for Information Systems and Organizations</li>
+<li>Center for Internet Security (CIS), Critical Security Controls v8</li>
+<li>Ross Anderson, <em>Security Engineering: A Guide to Building Dependable Distributed Systems</em> (Wiley, 3rd ed., 2020)</li>
+<li>US Senate Committee on Commerce, Science, and Transportation, "A 'Kill Chain' Analysis of the 2013 Target Data Breach" (March 2014)</li>
+<li>FireEye/Mandiant, "Highly Evasive Attacker Leverages SolarWinds Supply Chain to Compromise Multiple Global Victims With SUNBURST Backdoor" (December 2020)</li>
+<li>US House Committee on Oversight, <em>The Equifax Data Breach</em> (December 2018)</li>
 </ul>
-<h3 id="development-practices">Development Practices<a class="headerlink" href="#development-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/034-blameless-post-incident-review/">34. Blameless Post-Incident Review **</a> · AI</li>
-<li><a href="patterns/035-contract-first-integration/">35. Contract-First Integration **</a></li>
-<li><a href="patterns/036-incident-response-procedure/">36. Incident Response Procedure **</a></li>
-<li><a href="patterns/037-open-incident-communication/">37. Open Incident Communication **</a></li>
-<li><a href="patterns/038-rollback-first-recovery/">38. Rollback-First Recovery **</a></li>
-<li><a href="patterns/039-chaos-engineering/">39. Chaos Engineering **</a></li>
-<li><a href="patterns/040-service-level-objective/">40. Service Level Objective **</a></li>
-<li><a href="patterns/041-stress-testing/">41. Stress Testing **</a> · AI</li>
-<li><a href="patterns/042-small-batches/">42. Small Batches **</a></li>
-<li><a href="patterns/043-concurrent-incident-separation/">43. Concurrent Incident Separation *</a></li>
-<li><a href="patterns/044-continuous-integration-with-comprehensive-tests/">44. Continuous Integration with Comprehensive Tests **</a></li>
-<li><a href="patterns/045-corrective-action-integration-into-delivery/">45. Corrective Action Integration into Delivery *</a></li>
-<li><a href="patterns/046-cutover-rehearsal/">46. Cutover Rehearsal **</a></li>
-<li><a href="patterns/047-iterative-delivery/">47. Iterative Delivery **</a></li>
-<li><a href="patterns/048-legacy-integration-risk-treatment/">48. Legacy Integration Risk Treatment *</a></li>
-<li><a href="patterns/049-load-testing-as-engineering-practice/">49. Load Testing as Engineering Practice *</a></li>
-<li><a href="patterns/050-user-research-as-a-continuous-practice/">50. User Research as a Continuous Practice *</a></li>
-<li><a href="patterns/051-verified-recovery/">51. Verified Recovery **</a></li>
-</ul>
-<h3 id="delivery-pipeline">Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/052-continuous-vulnerability-scanning/">52. Continuous Vulnerability Scanning **</a> · AI</li>
-<li><a href="patterns/053-dead-code-removal/">53. Dead Code Removal **</a> · AI</li>
-<li><a href="patterns/054-deployment-verification/">54. Deployment Verification **</a></li>
-<li><a href="patterns/055-branch-based-testing/">55. Branch-Based Testing *</a></li>
-<li><a href="patterns/056-certificate-and-secret-lifecycle-management/">56. Certificate and Secret Lifecycle Management *</a></li>
-<li><a href="patterns/057-ephemeral-build-environment/">57. Ephemeral Build Environment *</a></li>
-<li><a href="patterns/058-feature-flag-lifecycle-management/">58. Feature Flag Lifecycle Management **</a></li>
-<li><a href="patterns/059-principle-of-least-privilege/">59. Principle of Least Privilege **</a></li>
-<li><a href="patterns/060-reproducible-build/">60. Reproducible Build **</a></li>
-<li><a href="patterns/061-software-bill-of-materials/">61. Software Bill of Materials **</a> · AI</li>
-<li><a href="patterns/062-transitive-dependency-awareness/">62. Transitive Dependency Awareness *</a> · AI</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Confidence ratings follow Alexander's convention:</p>
-<ul>
-<li><strong>**</strong> — the author believes this is an invariant</li>
-<li><strong>*</strong> — likely true but the form is uncertain</li>
-<li><strong>no star</strong> — a hypothesis</li>
-</ul>
-<p>Patterns marked <strong>AI</strong> have their forces meaningfully modified by AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2451,10 +2412,10 @@ and operate software. Following Christopher Alexander's methodology.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

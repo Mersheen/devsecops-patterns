@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../023-explicit-service-boundary/">
       
-        <link rel="next" href="patterns/001-blast-radius-based-investment/">
+      
+        <link rel="next" href="../025-immutable-infrastructure/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>24. Rollback Capability - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-pattern-language-for-devops" class="md-skip">
+        <a href="#rollback-capability" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              24. Rollback Capability
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,37 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -277,109 +252,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns by Scale
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patterns by Scale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Philosophy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -400,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -427,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -473,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -501,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -529,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -557,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -585,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -613,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -641,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -669,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -697,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/010-embedded-technical-leadership/" class="md-nav__link">
+      <a href="../010-embedded-technical-leadership/" class="md-nav__link">
         
   
   
@@ -725,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -753,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -781,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -809,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -837,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -865,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -893,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -921,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -949,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -977,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -1005,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -1033,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -1061,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -1086,10 +958,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patterns/024-rollback-capability/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    24. Rollback Capability
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1105,6 +1004,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1117,7 +1114,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1145,7 +1142,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1173,7 +1170,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/027-defence-in-depth/" class="md-nav__link">
+      <a href="../027-defence-in-depth/" class="md-nav__link">
         
   
   
@@ -1201,7 +1198,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1229,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1257,7 +1254,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1285,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1313,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1341,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1369,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1397,7 +1394,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1425,7 +1422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1453,7 +1450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/037-open-incident-communication/" class="md-nav__link">
+      <a href="../037-open-incident-communication/" class="md-nav__link">
         
   
   
@@ -1481,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1509,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1537,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1565,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1593,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1621,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1677,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1705,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1733,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1761,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+      <a href="../048-legacy-integration-risk-treatment/" class="md-nav__link">
         
   
   
@@ -1789,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1817,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1845,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1873,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1901,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1929,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1957,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/055-branch-based-testing/" class="md-nav__link">
+      <a href="../055-branch-based-testing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2013,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -2041,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2069,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -2097,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -2125,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2153,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2208,22 +2205,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
+  <a href="#forces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns by Scale
+        Forces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Patterns by Scale">
+    <nav class="md-nav" aria-label="Forces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
+  <a href="#how-the-forces-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Philosophy
+        How the forces apply
       
     </span>
   </a>
@@ -2231,43 +2228,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
+  <a href="#scarcity-constraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
+        Scarcity constraint
       
     </span>
   </a>
@@ -2280,10 +2244,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#real-world-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2307,103 +2299,74 @@
 
 
 
-<h1 id="a-pattern-language-for-devops">A Pattern Language for DevOps<a class="headerlink" href="#a-pattern-language-for-devops" title="Permanent link">&para;</a></h1>
-<p>A pattern language for how software engineering organisations build, deliver,
-and operate software. Following Christopher Alexander's methodology.</p>
-<p>AI is not a section. It is a force present at every level.</p>
-<p><img alt="Pattern Graph" loading="lazy" src="assets/pattern-graph.svg" /></p>
-<h2 id="patterns-by-scale">Patterns by Scale<a class="headerlink" href="#patterns-by-scale" title="Permanent link">&para;</a></h2>
-<h3 id="organisational-philosophy">Organisational Philosophy<a class="headerlink" href="#organisational-philosophy" title="Permanent link">&para;</a></h3>
+<h1 id="rollback-capability">Rollback Capability **<a class="headerlink" href="#rollback-capability" title="Permanent link">&para;</a></h1>
+<p><em>When <strong>Error Budget (11)</strong> formalizes the economic incentive to preserve reliability and every minute of degraded service consumes budget that could fund future innovation, the speed of recovery determines the cost of every deployment failure.</em></p>
+<hr />
+<p><strong>Every deployment carries risk. Code that passed all tests may still break production. A configuration change that worked in staging may fail at scale. A database migration that ran cleanly offline may deadlock under live traffic. When the deployment fails, the organization faces a choice: fix forward or revert. Fixing forward requires understanding what broke, diagnosing the root cause, developing a fix, testing it, and deploying it — all while production is degraded and users are affected. Reverting to the last known good state bypasses diagnosis and gets users back to working service immediately. The ability to revert quickly — within seconds or minutes — determines whether a deployment failure is a brief blip or a prolonged outage.</strong></p>
+<hr />
+<p>GitLab's January 2017 database incident demonstrates what happens when rollback mechanisms exist on paper but not in practice. An engineer, working late to resolve database replication lag, accidentally ran a deletion command on the primary database instead of the secondary. 300GB were deleted before the command was stopped. GitLab had five backup mechanisms. All failed. Scheduled database dumps had never run due to misconfiguration. Email alerts about backup failures were silently rejected. The secondary database was out of sync. Azure disk snapshots would take 18 hours to restore. The only viable recovery path was an LVM snapshot an engineer had manually taken six hours earlier for an unrelated task. GitLab recovered after 18 hours, losing six hours of data affecting thousands of projects. The rollback mechanisms existed in the architecture diagram but had never been verified. When rollback was needed, the organization discovered it had none.</p>
+<p>The distinction between "we have rollback capability" and "we have verified rollback capability" is the difference between theory and practice. Many organizations maintain backup systems, keep previous deployment artifacts, document rollback procedures, and believe they can revert when necessary. But if the rollback path has never been tested under production-like conditions, it is not a capability — it is a hope. Rollback verification means regularly exercising the revert path: deploying a change, then deliberately rolling it back to confirm that the mechanism works. This is not a one-time validation. Architectures evolve. New components are added. Database schemas change. What worked six months ago may not work today. Rollback capability decays if not maintained.</p>
+<p>The architectural preconditions for fast rollback are non-obvious. First, previous versions must be retained. If the deployment process deletes the old binary or configuration when installing the new one, rollback requires rebuilding from source, which is slow. Second, rollback must not require state migration. A database schema change that adds a required column can be rolled back, but a change that drops a column cannot — the data is gone. This means that risky schema changes must be executed in two phases: deploy code that tolerates both old and new schemas, migrate the schema, then deploy code that requires the new schema. The two-phase approach makes each step individually reversible. Third, rollback must not require coordinating multiple services simultaneously. If service A and service B were upgraded together and their new versions are incompatible with the old versions, rolling back A without rolling back B breaks the system just as badly as the original failure. Service boundaries must be versioned such that rollback can be independent.</p>
+<p>The hardest rollback scenario is a bad database migration. Code changes are easy to revert: redeploy the previous binary. Configuration changes are easy to revert: restore the previous config file. Data changes are fundamentally different because they destroy information. A migration that deletes a table cannot be rolled back — the data is gone. A migration that changes data in place (e.g., normalizing phone numbers) cannot be rolled back without keeping a copy of the original data, which doubles storage cost. This is why high-consequence database changes are approached differently: they are tested exhaustively in production-like environments, executed with manual oversight, and designed to be reversible through companion procedures that restore the original state if something goes wrong.</p>
+<p>Rollback is not just a technical mechanism; it is an organizational decision-making pattern. The default bias toward rollback — revert first, debug later — changes the character of incident response. Instead of teams scrambling to diagnose a problem under time pressure while users are affected, they revert to working state immediately, then investigate the cause from a position of stability. This requires cultural discipline. There is always someone who argues "we're close to a fix, let's not roll back yet" or "rolling back will confuse users who have already adapted to the new behavior." Rollback-first recovery means making reversion the automatic response to deployment-related incidents, overriding the instinct to fix forward until the problem is well-understood.</p>
+<p>Error budgets formalize this discipline. If a service's error budget is exhausted, further deployments are blocked until reliability is restored. This creates an explicit tradeoff: deploying faster increases feature velocity but consumes error budget. Rolling back faster preserves error budget for future deployments. The error budget makes the cost of slow rollback visible: every minute of degraded service is budget spent that could have funded future innovation. This economic framing helps organizations justify the investment in rollback infrastructure, which otherwise feels like paying for failure.</p>
+<p>Therefore:</p>
+<p><strong>Every deployment retains the previous version's artifacts so that reversion does not require rebuilding from source. The rollback procedure is tested regularly — not just documented but exercised — to verify that it works under production-like conditions. Database schema changes are designed to be reversible: changes that destroy information are avoided, changes that add structure are executed in phases that allow intermediate rollback, and high-consequence migrations are rehearsed in production-faithful test environments. Service boundaries are versioned such that rolling back one service does not break others. Rollback is fast enough — seconds or minutes, not hours — that it is the default first response to deployment-related incidents. The organization's incident response culture prioritizes reversion over diagnosis during active incidents: revert to working state, then investigate. Rollback capability is verified through regular drills that simulate deployment failures and measure how quickly the system can return to the last known good state. When rollback is impractical (irreversible data changes, multi-service coordination complexity), the deployment is classified as high-risk and receives proportionally more testing, rehearsal, and oversight.</strong></p>
+<hr />
+<p><em>This pattern is completed by <strong>Progressive Rollout (18)</strong>, which executes rollback automatically when deployment cohort metrics degrade. <strong>Deployment Pipeline (20)</strong> provides the automation infrastructure that retains previous artifacts and triggers reversion. <strong>Immutable Infrastructure (25)</strong> ensures that rolling back means deploying a known-good image rather than attempting to reverse in-place changes. <strong>Rollback-First Recovery (38)</strong> establishes the cultural bias toward reversion over diagnosis during active incidents. <strong>Cutover Rehearsal (46)</strong> tests rollback procedures before high-risk changes so that the reversion path is validated under realistic conditions. <strong>Verified Recovery (51)</strong> ensures that rollback mechanisms actually work by exercising them regularly rather than trusting documentation. <strong>Deployment Verification (54)</strong> confirms that the rolled-back state matches the expected previous version.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/001-blast-radius-based-investment/">1. Blast Radius-Based Investment **</a> · AI</li>
-<li><a href="patterns/002-working-in-the-open/">2. Working in the Open **</a></li>
-<li><a href="patterns/003-progressive-trust/">3. Progressive Trust *</a> · AI</li>
-<li><a href="patterns/004-shared-ownership-of-production/">4. Shared Ownership of Production **</a></li>
-<li><a href="patterns/005-content-as-code/">5. Content as Code *</a> · AI</li>
-<li><a href="patterns/006-design-principles-as-alignment-mechanism/">6. Design Principles as Alignment Mechanism **</a></li>
-<li><a href="patterns/007-knowledge-based-authority/">7. Knowledge-Based Authority *</a></li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: This is the primary force. Rollback is a deterministic mechanism: when a deployment fails, revert to the previous state. This determinism is what makes rollback fast — there is no diagnosis, no decision tree, no escalation. But determining when to trigger rollback requires adaptive judgment: is this degradation severe enough to justify reversion? Is it clearly caused by the deployment, or could it be an unrelated issue? The pattern resolves this by making rollback the default response to deployment-correlated incidents, which minimizes the judgment required under time pressure, while preserving human override for cases where rollback is inappropriate.</p>
+</li>
+<li>
+<p><strong>Speed vs Safety</strong>: Rollback enables both speed and safety simultaneously, which is why it is foundational to continuous deployment. Without rollback capability, deployments must be slow because each one is high-risk. With rollback capability, deployments can be fast because failures are cheap — revert, investigate, fix, redeploy. The DORA research establishes this empirically: elite performers deploy frequently <em>and</em> have low mean time to recovery (MTTR), and fast rollback is the mechanism that makes both possible. The force is not a tension but a reinforcement: rollback capability increases both speed and safety.</p>
+</li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: Rollback reduces the scope of what must be understood during an incident. Without rollback, diagnosing the cause of a deployment failure is urgent work that must happen while production is degraded. With rollback, diagnosis can be deferred until after service is restored, reducing time pressure and cognitive load. The pattern makes incidents more comprehensible by separating recovery (fast, mechanical reversion) from understanding (slower, investigative diagnosis).</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong>: Teams need autonomy to deploy and rollback without waiting for approval. The organization needs alignment on what constitutes a valid reason to rollback and how rollback integrates with monitoring and communication. The pattern resolves this by making rollback an automated response to objective signals (error rate thresholds, latency degradation) while preserving human override. This distributes the rollback decision to the monitoring system, which applies organizational standards consistently.</p>
+</li>
 </ul>
-<h3 id="organisational-structure">Organisational Structure<a class="headerlink" href="#organisational-structure" title="Permanent link">&para;</a></h3>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Rollback capability requires investment in infrastructure that produces no value until it is needed. Retaining previous versions consumes storage. Testing rollback procedures consumes engineering time. Designing reversible database migrations constrains architecture and slows development. The political challenge is justifying this investment during periods without incidents — the longer the system runs without needing rollback, the more the capability feels like waste. The scarcity is executive patience for paying the insurance premium when the risk seems remote. Additionally, rollback verification requires production-like test environments, which are expensive to maintain and difficult to keep synchronized with production as the architecture evolves. The cost of verification is ongoing, and the value is the absence of a catastrophic failure that might never happen.</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/008-platform-team/">8. Platform Team **</a> · AI</li>
-<li><a href="patterns/009-team-aligned-architecture/">9. Team-Aligned Architecture **</a></li>
-<li><a href="patterns/010-embedded-technical-leadership/">10. Embedded Technical Leadership **</a></li>
-<li><a href="patterns/011-error-budget/">11. Error Budget **</a></li>
-<li><a href="patterns/012-escalation-with-integrity/">12. Escalation with Integrity **</a></li>
-<li><a href="patterns/013-incentive-alignment/">13. Incentive Alignment **</a></li>
-<li><a href="patterns/014-patch-management/">14. Patch Management **</a></li>
-<li><a href="patterns/015-explicit-coordination-mechanisms/">15. Explicit Coordination Mechanisms *</a></li>
-<li><a href="patterns/016-multidisciplinary-team/">16. Multidisciplinary Team **</a></li>
-<li><a href="patterns/017-service-standard/">17. Service Standard **</a></li>
+<li>
+<p><strong>GitLab database incident (January 2017)</strong>: GitLab discovered during a live incident that none of its five backup mechanisms worked. Scheduled dumps had never run. Email alerts were silently rejected. The only viable recovery path was an accidental manual snapshot. The incident led to institutional changes: assigned ownership of backup integrity with authority to halt deployments, automated backup verification through regular restoration tests, and public postmortem documenting the failure. The lesson: rollback mechanisms that are not regularly verified do not exist.</p>
+</li>
+<li>
+<p><strong>Etsy's deployment culture (2011-2014)</strong>: Etsy's deployment system (Deployinator) included one-button rollback that was as easy as one-button deployment. This made rolling back psychologically safe — it was not an admission of failure but a normal operational response. Combined with high deployment frequency (50+ per day), this created a culture where small failures were cheap and recovery was fast. The low cost of failure enabled the high deployment velocity.</p>
+</li>
+<li>
+<p><strong>Amazon (2011 onward)</strong>: Amazon's service-oriented architecture required that services could be deployed and rolled back independently. This meant versioning service boundaries such that rolling back service A did not break service B. The architectural discipline — backward-compatible APIs, no lock-step deployments — made rollback tractable at the scale of thousands of deployments per day. Without this, rollback coordination would have been a bottleneck that prevented the deployment frequency Amazon achieved.</p>
+</li>
+<li>
+<p><strong>DORA State of DevOps research (2014-2019)</strong>: The research established that elite performers deploy more frequently <em>and</em> recover from failures faster. The mechanism connecting these is rollback capability: organizations that can revert quickly deploy more often because each deployment carries less risk. Mean time to recovery (MTTR) emerged as one of the four key metrics, with elite performers recovering in under one hour while low performers took between one week and one month. Fast rollback is the primary driver of low MTTR.</p>
+</li>
 </ul>
-<h3 id="value-and-architecture">Value and Architecture<a class="headerlink" href="#value-and-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="patterns/018-progressive-rollout/">18. Progressive Rollout **</a> · AI</li>
-<li><a href="patterns/019-blast-radius-limitation/">19. Blast Radius Limitation **</a></li>
-<li><a href="patterns/020-deployment-pipeline/">20. Deployment Pipeline **</a></li>
-<li><a href="patterns/021-observability/">21. Observability **</a> · AI</li>
-<li><a href="patterns/022-circuit-breaker/">22. Circuit Breaker **</a></li>
-<li><a href="patterns/023-explicit-service-boundary/">23. Explicit Service Boundary **</a></li>
-<li><a href="patterns/024-rollback-capability/">24. Rollback Capability **</a></li>
-<li><a href="patterns/025-immutable-infrastructure/">25. Immutable Infrastructure **</a></li>
-<li><a href="patterns/026-asset-inventory/">26. Asset Inventory **</a> · AI</li>
-<li><a href="patterns/027-defence-in-depth/">27. Defence in Depth **</a></li>
-<li><a href="patterns/028-graceful-degradation/">28. Graceful Degradation **</a></li>
-<li><a href="patterns/029-incremental-migration/">29. Incremental Migration **</a></li>
-<li><a href="patterns/030-irreversible-action-boundary/">30. Irreversible Action Boundary **</a></li>
-<li><a href="patterns/031-production-faithful-test-environment/">31. Production-Faithful Test Environment **</a></li>
-<li><a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/">32. Alerting on the Alerts (Dead Man's Switch) *</a></li>
-<li><a href="patterns/033-kill-switch/">33. Kill Switch **</a></li>
+<li>Jez Humble and David Farley, <em>Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation</em> (Addison-Wesley, 2010), Chapter 10 on rollback and blue-green deployment</li>
+<li>Michael T. Nygard, <em>Release It! Design and Deploy Production-Ready Software</em>, 2nd Edition (Pragmatic Bookshelf, 2018), Chapter 9 on reversibility</li>
+<li>Google SRE, "Canarying Releases," <em>The Site Reliability Workbook</em> (O'Reilly, 2018), Chapter 16 — automated rollback as part of canary analysis</li>
+<li>GitLab, "Postmortem of database outage of January 31" (about.gitlab.com, February 2017) — the canonical example of backup verification failure</li>
+<li>Nicole Forsgren, Jez Humble, and Gene Kim, <em>Accelerate: The Science of Lean Software and DevOps: Building and Scaling High Performing Technology Organizations</em> (IT Revolution Press, 2018) — DORA research establishing MTTR as key metric</li>
+<li>Charity Majors, "Deploys on a Friday: A Love Story" (charity.wtf, 2019) — rollback as enabler of deployment confidence</li>
+<li>Mike Brittain, "Rollback procedures and testing," Code as Craft (Etsy Engineering Blog, 2012)</li>
 </ul>
-<h3 id="development-practices">Development Practices<a class="headerlink" href="#development-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/034-blameless-post-incident-review/">34. Blameless Post-Incident Review **</a> · AI</li>
-<li><a href="patterns/035-contract-first-integration/">35. Contract-First Integration **</a></li>
-<li><a href="patterns/036-incident-response-procedure/">36. Incident Response Procedure **</a></li>
-<li><a href="patterns/037-open-incident-communication/">37. Open Incident Communication **</a></li>
-<li><a href="patterns/038-rollback-first-recovery/">38. Rollback-First Recovery **</a></li>
-<li><a href="patterns/039-chaos-engineering/">39. Chaos Engineering **</a></li>
-<li><a href="patterns/040-service-level-objective/">40. Service Level Objective **</a></li>
-<li><a href="patterns/041-stress-testing/">41. Stress Testing **</a> · AI</li>
-<li><a href="patterns/042-small-batches/">42. Small Batches **</a></li>
-<li><a href="patterns/043-concurrent-incident-separation/">43. Concurrent Incident Separation *</a></li>
-<li><a href="patterns/044-continuous-integration-with-comprehensive-tests/">44. Continuous Integration with Comprehensive Tests **</a></li>
-<li><a href="patterns/045-corrective-action-integration-into-delivery/">45. Corrective Action Integration into Delivery *</a></li>
-<li><a href="patterns/046-cutover-rehearsal/">46. Cutover Rehearsal **</a></li>
-<li><a href="patterns/047-iterative-delivery/">47. Iterative Delivery **</a></li>
-<li><a href="patterns/048-legacy-integration-risk-treatment/">48. Legacy Integration Risk Treatment *</a></li>
-<li><a href="patterns/049-load-testing-as-engineering-practice/">49. Load Testing as Engineering Practice *</a></li>
-<li><a href="patterns/050-user-research-as-a-continuous-practice/">50. User Research as a Continuous Practice *</a></li>
-<li><a href="patterns/051-verified-recovery/">51. Verified Recovery **</a></li>
-</ul>
-<h3 id="delivery-pipeline">Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/052-continuous-vulnerability-scanning/">52. Continuous Vulnerability Scanning **</a> · AI</li>
-<li><a href="patterns/053-dead-code-removal/">53. Dead Code Removal **</a> · AI</li>
-<li><a href="patterns/054-deployment-verification/">54. Deployment Verification **</a></li>
-<li><a href="patterns/055-branch-based-testing/">55. Branch-Based Testing *</a></li>
-<li><a href="patterns/056-certificate-and-secret-lifecycle-management/">56. Certificate and Secret Lifecycle Management *</a></li>
-<li><a href="patterns/057-ephemeral-build-environment/">57. Ephemeral Build Environment *</a></li>
-<li><a href="patterns/058-feature-flag-lifecycle-management/">58. Feature Flag Lifecycle Management **</a></li>
-<li><a href="patterns/059-principle-of-least-privilege/">59. Principle of Least Privilege **</a></li>
-<li><a href="patterns/060-reproducible-build/">60. Reproducible Build **</a></li>
-<li><a href="patterns/061-software-bill-of-materials/">61. Software Bill of Materials **</a> · AI</li>
-<li><a href="patterns/062-transitive-dependency-awareness/">62. Transitive Dependency Awareness *</a> · AI</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Confidence ratings follow Alexander's convention:</p>
-<ul>
-<li><strong>**</strong> — the author believes this is an invariant</li>
-<li><strong>*</strong> — likely true but the form is uncertain</li>
-<li><strong>no star</strong> — a hypothesis</li>
-</ul>
-<p>Patterns marked <strong>AI</strong> have their forces meaningfully modified by AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2451,10 +2414,10 @@ and operate software. Following Christopher Alexander's methodology.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

@@ -11,26 +11,28 @@
       
       
       
+        <link rel="prev" href="../036-incident-response-procedure/">
       
-        <link rel="next" href="patterns/001-blast-radius-based-investment/">
+      
+        <link rel="next" href="../038-rollback-first-recovery/">
       
       
         
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>37. Open Incident Communication - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -49,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#a-pattern-language-for-devops" class="md-skip">
+        <a href="#open-incident-communication" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              37. Open Incident Communication
             
           </span>
         </div>
@@ -216,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -231,37 +233,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Home
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -277,109 +252,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Patterns by Scale
-      
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Patterns by Scale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Philosophy
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        About
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -388,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -400,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -427,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -445,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -473,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -501,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -529,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -557,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -585,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -613,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -641,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -669,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -697,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/010-embedded-technical-leadership/" class="md-nav__link">
+      <a href="../010-embedded-technical-leadership/" class="md-nav__link">
         
   
   
@@ -725,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -753,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -781,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -809,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -837,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -865,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -893,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -921,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -949,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -977,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -1005,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -1033,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -1061,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -1089,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/024-rollback-capability/" class="md-nav__link">
+      <a href="../024-rollback-capability/" class="md-nav__link">
         
   
   
@@ -1117,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1145,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1173,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/027-defence-in-depth/" class="md-nav__link">
+      <a href="../027-defence-in-depth/" class="md-nav__link">
         
   
   
@@ -1201,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1229,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1257,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1285,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1313,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1341,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1369,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1397,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1425,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1450,10 +1322,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="patterns/037-open-incident-communication/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    37. Open Incident Communication
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1469,6 +1368,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1481,7 +1478,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1509,7 +1506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1537,7 +1534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1565,7 +1562,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1593,7 +1590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1621,7 +1618,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1649,7 +1646,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1677,7 +1674,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1705,7 +1702,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1733,7 +1730,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1761,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+      <a href="../048-legacy-integration-risk-treatment/" class="md-nav__link">
         
   
   
@@ -1789,7 +1786,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1817,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1845,7 +1842,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1873,7 +1870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1901,7 +1898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1929,7 +1926,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1957,7 +1954,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/055-branch-based-testing/" class="md-nav__link">
+      <a href="../055-branch-based-testing/" class="md-nav__link">
         
   
   
@@ -1985,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2013,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -2041,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -2069,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -2097,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -2125,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2153,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2208,22 +2205,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#patterns-by-scale" class="md-nav__link">
+  <a href="#forces" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Patterns by Scale
+        Forces
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Patterns by Scale">
+    <nav class="md-nav" aria-label="Forces">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#organisational-philosophy" class="md-nav__link">
+  <a href="#how-the-forces-apply" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Philosophy
+        How the forces apply
       
     </span>
   </a>
@@ -2231,43 +2228,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#organisational-structure" class="md-nav__link">
+  <a href="#scarcity-constraint" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Organisational Structure
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#value-and-architecture" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Value and Architecture
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#development-practices" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Development Practices
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#delivery-pipeline" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Delivery Pipeline
+        Scarcity constraint
       
     </span>
   </a>
@@ -2280,10 +2244,38 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
+  <a href="#real-world-scenarios" class="md-nav__link">
     <span class="md-ellipsis">
       
-        About
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
       
     </span>
   </a>
@@ -2307,103 +2299,74 @@
 
 
 
-<h1 id="a-pattern-language-for-devops">A Pattern Language for DevOps<a class="headerlink" href="#a-pattern-language-for-devops" title="Permanent link">&para;</a></h1>
-<p>A pattern language for how software engineering organisations build, deliver,
-and operate software. Following Christopher Alexander's methodology.</p>
-<p>AI is not a section. It is a force present at every level.</p>
-<p><img alt="Pattern Graph" loading="lazy" src="assets/pattern-graph.svg" /></p>
-<h2 id="patterns-by-scale">Patterns by Scale<a class="headerlink" href="#patterns-by-scale" title="Permanent link">&para;</a></h2>
-<h3 id="organisational-philosophy">Organisational Philosophy<a class="headerlink" href="#organisational-philosophy" title="Permanent link">&para;</a></h3>
+<h1 id="open-incident-communication">Open Incident Communication **<a class="headerlink" href="#open-incident-communication" title="Permanent link">&para;</a></h1>
+<p><em>When <strong>Working in the Open (2)</strong> establishes the organizational commitment to transparency and <strong>Explicit Coordination Mechanisms (15)</strong> define how teams negotiate shared concerns, the choice between private war rooms and public coordination channels determines whether operational knowledge concentrates in a few people or becomes organizational capability.</em></p>
+<hr />
+<p><strong>When incidents are handled privately by a small group, the rest of the organization does not learn from them. Operational knowledge concentrates in a few people, creating a fragile dependency. Meanwhile, the secrecy around incidents signals that failure is shameful, which discourages the transparency needed to prevent future failures. But open communication during incidents feels risky: exposing mistakes publicly, broadcasting uncertainty, creating noise that distracts responders. The tension is real — privacy protects egos and reduces distraction, but it also prevents learning and isolates expertise.</strong></p>
+<hr />
+<p>Etsy made incident coordination public by default. When production degraded, the response happened in IRC channels (#warroom) where anyone in the company could observe and learn. Engineers not directly responding could watch how incidents unfolded, see what questions effective responders asked, understand what diagnostic commands mattered. New engineers learned operational patterns by osmosis. The public channel also served as coordination infrastructure: everyone responding had the same information, no one was left out of critical decisions, and the written record became a searchable archive. The transparency extended externally through fix.etsy.com, a public status page updated in real time during incidents. Customers could see what was broken and what was being done, rather than experiencing mysterious degradation with no explanation.</p>
+<p>The practice requires psychological safety. If engineers fear that public mistakes will be held against them — in performance reviews, promotion decisions, or peer reputation — they will coordinate privately where errors can be hidden. Etsy's blameless postmortem culture was the prerequisite. Engineers knew that being visible during an incident, even when they made diagnostic errors or needed help, was culturally safe. The alternative — hiding incidents in private channels — looked worse than being publicly uncertain. The norm became: work in the open, ask for help publicly, and let everyone learn from your investigation process.</p>
+<p>General Stanley McChrystal's "Team of Teams" describes the same principle in military operations. During the Iraq War, Joint Special Operations Command operated in a shared consciousness model: all operational information was visible to all units in real time. This violated traditional information security practice, where intelligence is compartmentalized and shared on a need-to-know basis. But compartmentalization created coordination failures: one unit would discover a critical pattern that another unit needed but did not know existed. Shared consciousness traded information security for operational effectiveness. The same tradeoff applies to software incidents. Private incident channels protect individual egos and reduce perceived noise, but they prevent the pattern recognition that comes from seeing many incidents and understanding how they relate.</p>
+<p>The noise concern is legitimate. A public coordination channel can become chaotic: multiple simultaneous conversations, people offering unhelpful suggestions, observers asking questions that interrupt the response. Etsy managed this through channel norms. The #warroom channel had a single active incident at a time — <strong>Concurrent Incident Separation (43)</strong> was enforced culturally. Side conversations moved to threads or separate channels. Observers were welcome but expected to avoid interrupting the primary responders. The Incident Commander role (from <strong>Incident Response Procedure (36)</strong>) owned the channel: they could redirect conversations, ask people to move discussions elsewhere, and maintain focus. The structure prevented the chaos that unmoderated public channels produce.</p>
+<p>External communication is harder than internal. Status page updates require translating technical details into customer-facing language: "database replication lag causing elevated latency" becomes "some customers may experience slow page loads." The translation takes time and judgment. It also exposes the organization to reputational damage and potential legal liability. But the alternative — silence during incidents — creates worse damage. Customers experiencing degraded service without explanation assume the worst. They escalate to support channels, post on social media, and lose trust. A status page that says "we know there's a problem and here's what we're doing" converts frustration into patience.</p>
+<p>GitLab took this further than any organization before or since. During the January 2017 database incident, they live-streamed the recovery process and updated a public Google Doc in real time as the incident unfolded. The world watched as GitLab discovered that their backup mechanisms had failed and as they scrambled to recover from an accidental manual snapshot. This was extraordinary transparency — most organizations would have hidden the recovery effort, announced the outage outcome, and published a sanitized postmortem weeks later. GitLab's approach was culturally coherent with their values (everything in the open) and strategically sound: the transparency built trust rather than destroying it. Customers and the broader software community saw an organization learning from a catastrophic failure in real time, which generated empathy rather than ridicule.</p>
+<p>The practice scales through tooling. Atlassian's Statuspage automates external communication: it integrates with monitoring systems to detect incidents, posts updates based on templates, subscribes customers to notifications, and archives incident history. PagerDuty's incident management system structures internal communication: it creates dedicated Slack channels for each incident, posts automated timeline updates, and links incident channels to post-incident review documents. These tools reduce the coordination overhead that would otherwise make open communication unsustainable at scale.</p>
+<p>Therefore:</p>
+<p><strong>Incidents are coordinated in public channels — accessible to anyone in the organization — where investigation, response, and coordination happen openly. The channel becomes the operational record: diagnostic hypotheses, commands executed, decisions made, external updates drafted. Anyone can observe and learn, but the Incident Commander maintains focus by redirecting side conversations and managing observer participation. The practice is reinforced by </strong>Blameless Post-Incident Review (34)<strong> culture: being visible during an incident, even when uncertain or wrong, is culturally valued rather than punished. External communication happens through a public status page updated in real time during significant incidents, translating technical details into customer-facing language. Status updates are verified against actual system state before publication to avoid announcing recovery before it occurs. Communication staff work embedded with incident responders rather than receiving second-hand summaries. The written record in public channels becomes an organizational knowledge base: incident patterns, effective diagnostic approaches, and system behavior under stress are captured in a searchable archive that new team members can learn from.</strong></p>
+<hr />
+<p><em>This pattern is completed by <strong>Blameless Post-Incident Review (34)</strong>, which converts the public incident record into structured organizational learning after the incident is resolved. <strong>Incident Response Procedure (36)</strong> provides the role structure — Incident Commander, Communications — that makes open channels coordinated rather than chaotic. <strong>Concurrent Incident Separation (43)</strong> prevents public channels from becoming incomprehensible when multiple incidents occur simultaneously, ensuring each incident has its own coordination space.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/001-blast-radius-based-investment/">1. Blast Radius-Based Investment **</a> · AI</li>
-<li><a href="patterns/002-working-in-the-open/">2. Working in the Open **</a></li>
-<li><a href="patterns/003-progressive-trust/">3. Progressive Trust *</a> · AI</li>
-<li><a href="patterns/004-shared-ownership-of-production/">4. Shared Ownership of Production **</a></li>
-<li><a href="patterns/005-content-as-code/">5. Content as Code *</a> · AI</li>
-<li><a href="patterns/006-design-principles-as-alignment-mechanism/">6. Design Principles as Alignment Mechanism **</a></li>
-<li><a href="patterns/007-knowledge-based-authority/">7. Knowledge-Based Authority *</a></li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: This is the primary tension. Public incident coordination expands the scope of who can observe and participate, which creates noise and potential distraction. But it also makes incidents more comprehensible to the organization: instead of a few people understanding what happened, everyone can observe the investigation process and understand how responders think about system behavior. The pattern resolves this by using role structure (Incident Commander owns the channel) and norms (observers do not interrupt) to keep public channels focused rather than chaotic.</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong> (secondary): Individual responders need autonomy to investigate and propose solutions without bureaucratic approval. But the organization needs alignment on what is being done, why, and what the current understanding is. Public channels provide alignment (everyone sees the same information) while preserving autonomy (responders execute without needing permission from observers). The channel creates shared situational awareness without creating a coordination bottleneck.</p>
+</li>
+<li>
+<p><strong>Speed vs Safety</strong>: Private incident channels are faster in the short term: fewer people, less distraction, no time spent on status updates. But they are less safe in the long term because they prevent organizational learning. Public channels accept some coordination overhead in exchange for building organizational capability. The pattern resolves this by making public coordination the default and optimizing it through tooling and norms rather than reverting to private channels.</p>
+</li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: The practice is adaptive: the Incident Commander adjusts communication style, depth of technical detail, and update frequency based on the incident's characteristics. But the channels and norms are deterministic: incidents always happen in public channels, status pages always get updated, communication always follows templates. This hybrid allows responders to adapt their communication to the situation while maintaining consistent transparency.</p>
+</li>
 </ul>
-<h3 id="organisational-structure">Organisational Structure<a class="headerlink" href="#organisational-structure" title="Permanent link">&para;</a></h3>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Open incident communication requires psychological safety that many organizations lack. If engineers fear that visible mistakes will damage their careers, they will coordinate privately. Building and maintaining that safety requires sustained cultural investment: blameless post-incident reviews, leadership modeling transparency, consistent enforcement of the norm that honesty is valued over perfection. Public channels also require moderation: someone must redirect side conversations, manage observer questions, and maintain focus. This is attention that could be spent on technical response. External communication requires translating technical details into customer-facing language in real time, which requires staff who understand both the technical systems and customer expectations. Organizations without dedicated communication staff struggle to maintain accurate, timely status updates during incidents, which creates the risk of either no communication (frustrating customers) or inaccurate communication (destroying trust).</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
 <ul>
-<li><a href="patterns/008-platform-team/">8. Platform Team **</a> · AI</li>
-<li><a href="patterns/009-team-aligned-architecture/">9. Team-Aligned Architecture **</a></li>
-<li><a href="patterns/010-embedded-technical-leadership/">10. Embedded Technical Leadership **</a></li>
-<li><a href="patterns/011-error-budget/">11. Error Budget **</a></li>
-<li><a href="patterns/012-escalation-with-integrity/">12. Escalation with Integrity **</a></li>
-<li><a href="patterns/013-incentive-alignment/">13. Incentive Alignment **</a></li>
-<li><a href="patterns/014-patch-management/">14. Patch Management **</a></li>
-<li><a href="patterns/015-explicit-coordination-mechanisms/">15. Explicit Coordination Mechanisms *</a></li>
-<li><a href="patterns/016-multidisciplinary-team/">16. Multidisciplinary Team **</a></li>
-<li><a href="patterns/017-service-standard/">17. Service Standard **</a></li>
+<li>
+<p><strong>Etsy's ChatOps culture (2011-2014)</strong>: Etsy coordinated all incident response in public IRC channels (#warroom). Anyone could observe. New engineers learned by watching how experienced responders diagnosed problems. The public channel became the operational record, creating a searchable archive of incident responses. External communication happened through fix.etsy.com, a public status page updated during incidents. The practice was culturally coherent with Etsy's broader commitment to transparency and blameless learning. It contributed to Etsy's ability to scale from ~20 deploys per day to 50+ while maintaining reliability.</p>
+</li>
+<li>
+<p><strong>GitLab database incident (January 2017)</strong>: GitLab live-streamed the database recovery process and updated a public Google Doc in real time as the incident unfolded. This extraordinary transparency — most organizations would have coordinated privately — built trust rather than destroying it. The world saw an organization learning from catastrophic failure in public, which generated empathy and reinforced GitLab's reputation for transparency. The incident coordination was public internally (team channels) and externally (status updates, live stream, Google Doc), demonstrating the pattern at maximum intensity.</p>
+</li>
+<li>
+<p><strong>Healthcare.gov launch failure (October 2013)</strong>: The absence of open incident communication contributed to coordination failures across 33 contractors. No shared operational picture. Teams working in isolation without visibility into what others were discovering or trying. The rescue operation established shared coordination: daily stand-ups at 10am and 6:30pm where all teams reported status, problems, and plans. This created the shared consciousness that had been absent during the launch. The transformation was not just technical but communicative: moving from fragmented private efforts to coordinated public visibility.</p>
+</li>
+<li>
+<p><strong>Statuspage and PagerDuty adoption (2010s-present)</strong>: The widespread adoption of tools that automate open incident communication (Statuspage for external updates, PagerDuty for internal coordination) demonstrates industry convergence on this practice. Organizations discovered independently that public coordination and transparent status communication build trust and operational capability more effectively than private war rooms and opaque customer communication.</p>
+</li>
 </ul>
-<h3 id="value-and-architecture">Value and Architecture<a class="headerlink" href="#value-and-architecture" title="Permanent link">&para;</a></h3>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="patterns/018-progressive-rollout/">18. Progressive Rollout **</a> · AI</li>
-<li><a href="patterns/019-blast-radius-limitation/">19. Blast Radius Limitation **</a></li>
-<li><a href="patterns/020-deployment-pipeline/">20. Deployment Pipeline **</a></li>
-<li><a href="patterns/021-observability/">21. Observability **</a> · AI</li>
-<li><a href="patterns/022-circuit-breaker/">22. Circuit Breaker **</a></li>
-<li><a href="patterns/023-explicit-service-boundary/">23. Explicit Service Boundary **</a></li>
-<li><a href="patterns/024-rollback-capability/">24. Rollback Capability **</a></li>
-<li><a href="patterns/025-immutable-infrastructure/">25. Immutable Infrastructure **</a></li>
-<li><a href="patterns/026-asset-inventory/">26. Asset Inventory **</a> · AI</li>
-<li><a href="patterns/027-defence-in-depth/">27. Defence in Depth **</a></li>
-<li><a href="patterns/028-graceful-degradation/">28. Graceful Degradation **</a></li>
-<li><a href="patterns/029-incremental-migration/">29. Incremental Migration **</a></li>
-<li><a href="patterns/030-irreversible-action-boundary/">30. Irreversible Action Boundary **</a></li>
-<li><a href="patterns/031-production-faithful-test-environment/">31. Production-Faithful Test Environment **</a></li>
-<li><a href="patterns/032-alerting-on-the-alerts-dead-mans-switch/">32. Alerting on the Alerts (Dead Man's Switch) *</a></li>
-<li><a href="patterns/033-kill-switch/">33. Kill Switch **</a></li>
+<li>Code as Craft (Etsy), "ChatOps at Etsy" (2012)</li>
+<li>Atlassian, Incident Communication Best Practices and Statuspage documentation</li>
+<li>Stanley McChrystal, <em>Team of Teams: New Rules of Engagement for a Complex World</em> (Portfolio, 2015), particularly Chapter 7 on "Sharing Consciousness"</li>
+<li>GitLab, real-time public incident documentation during January 2017 database incident</li>
+<li>PagerDuty, "Incident Communication Framework" (documentation)</li>
+<li>Mike Rembetsy and Patrick McDonnell, "Continuously Deploying Culture," Velocity London, October 2012 (discussing Etsy's public incident coordination)</li>
 </ul>
-<h3 id="development-practices">Development Practices<a class="headerlink" href="#development-practices" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/034-blameless-post-incident-review/">34. Blameless Post-Incident Review **</a> · AI</li>
-<li><a href="patterns/035-contract-first-integration/">35. Contract-First Integration **</a></li>
-<li><a href="patterns/036-incident-response-procedure/">36. Incident Response Procedure **</a></li>
-<li><a href="patterns/037-open-incident-communication/">37. Open Incident Communication **</a></li>
-<li><a href="patterns/038-rollback-first-recovery/">38. Rollback-First Recovery **</a></li>
-<li><a href="patterns/039-chaos-engineering/">39. Chaos Engineering **</a></li>
-<li><a href="patterns/040-service-level-objective/">40. Service Level Objective **</a></li>
-<li><a href="patterns/041-stress-testing/">41. Stress Testing **</a> · AI</li>
-<li><a href="patterns/042-small-batches/">42. Small Batches **</a></li>
-<li><a href="patterns/043-concurrent-incident-separation/">43. Concurrent Incident Separation *</a></li>
-<li><a href="patterns/044-continuous-integration-with-comprehensive-tests/">44. Continuous Integration with Comprehensive Tests **</a></li>
-<li><a href="patterns/045-corrective-action-integration-into-delivery/">45. Corrective Action Integration into Delivery *</a></li>
-<li><a href="patterns/046-cutover-rehearsal/">46. Cutover Rehearsal **</a></li>
-<li><a href="patterns/047-iterative-delivery/">47. Iterative Delivery **</a></li>
-<li><a href="patterns/048-legacy-integration-risk-treatment/">48. Legacy Integration Risk Treatment *</a></li>
-<li><a href="patterns/049-load-testing-as-engineering-practice/">49. Load Testing as Engineering Practice *</a></li>
-<li><a href="patterns/050-user-research-as-a-continuous-practice/">50. User Research as a Continuous Practice *</a></li>
-<li><a href="patterns/051-verified-recovery/">51. Verified Recovery **</a></li>
-</ul>
-<h3 id="delivery-pipeline">Delivery Pipeline<a class="headerlink" href="#delivery-pipeline" title="Permanent link">&para;</a></h3>
-<ul>
-<li><a href="patterns/052-continuous-vulnerability-scanning/">52. Continuous Vulnerability Scanning **</a> · AI</li>
-<li><a href="patterns/053-dead-code-removal/">53. Dead Code Removal **</a> · AI</li>
-<li><a href="patterns/054-deployment-verification/">54. Deployment Verification **</a></li>
-<li><a href="patterns/055-branch-based-testing/">55. Branch-Based Testing *</a></li>
-<li><a href="patterns/056-certificate-and-secret-lifecycle-management/">56. Certificate and Secret Lifecycle Management *</a></li>
-<li><a href="patterns/057-ephemeral-build-environment/">57. Ephemeral Build Environment *</a></li>
-<li><a href="patterns/058-feature-flag-lifecycle-management/">58. Feature Flag Lifecycle Management **</a></li>
-<li><a href="patterns/059-principle-of-least-privilege/">59. Principle of Least Privilege **</a></li>
-<li><a href="patterns/060-reproducible-build/">60. Reproducible Build **</a></li>
-<li><a href="patterns/061-software-bill-of-materials/">61. Software Bill of Materials **</a> · AI</li>
-<li><a href="patterns/062-transitive-dependency-awareness/">62. Transitive Dependency Awareness *</a> · AI</li>
-</ul>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>Confidence ratings follow Alexander's convention:</p>
-<ul>
-<li><strong>**</strong> — the author believes this is an invariant</li>
-<li><strong>*</strong> — likely true but the form is uncertain</li>
-<li><strong>no star</strong> — a hypothesis</li>
-</ul>
-<p>Patterns marked <strong>AI</strong> have their forces meaningfully modified by AI.</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -2451,10 +2414,10 @@ and operate software. Following Christopher Alexander's methodology.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

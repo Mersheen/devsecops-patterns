@@ -11,24 +11,28 @@
       
       
       
+        <link rel="prev" href="../054-deployment-verification/">
+      
+      
+        <link rel="next" href="../056-certificate-and-secret-lifecycle-management/">
       
       
         
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
     
       
-        <title>A Pattern Language for DevOps</title>
+        <title>55. Branch-Based Testing - A Pattern Language for DevOps</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -47,7 +51,7 @@
       
     
     
-    <script>__md_scope=new URL("/",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#branch-based-testing" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -83,7 +92,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-header__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -103,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              55. Branch-Based Testing
             
           </span>
         </div>
@@ -209,7 +218,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
+    <a href="../.." title="A Pattern Language for DevOps" class="md-nav__button md-logo" aria-label="A Pattern Language for DevOps" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -227,7 +236,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -251,8 +260,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -263,13 +274,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
@@ -290,7 +299,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             
@@ -308,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/001-blast-radius-based-investment/" class="md-nav__link">
+      <a href="../001-blast-radius-based-investment/" class="md-nav__link">
         
   
   
@@ -336,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/002-working-in-the-open/" class="md-nav__link">
+      <a href="../002-working-in-the-open/" class="md-nav__link">
         
   
   
@@ -364,7 +373,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/003-progressive-trust/" class="md-nav__link">
+      <a href="../003-progressive-trust/" class="md-nav__link">
         
   
   
@@ -392,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/004-shared-ownership-of-production/" class="md-nav__link">
+      <a href="../004-shared-ownership-of-production/" class="md-nav__link">
         
   
   
@@ -420,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/005-content-as-code/" class="md-nav__link">
+      <a href="../005-content-as-code/" class="md-nav__link">
         
   
   
@@ -448,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/006-design-principles-as-alignment-mechanism/" class="md-nav__link">
+      <a href="../006-design-principles-as-alignment-mechanism/" class="md-nav__link">
         
   
   
@@ -476,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/007-knowledge-based-authority/" class="md-nav__link">
+      <a href="../007-knowledge-based-authority/" class="md-nav__link">
         
   
   
@@ -504,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/008-platform-team/" class="md-nav__link">
+      <a href="../008-platform-team/" class="md-nav__link">
         
   
   
@@ -532,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/009-team-aligned-architecture/" class="md-nav__link">
+      <a href="../009-team-aligned-architecture/" class="md-nav__link">
         
   
   
@@ -560,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/010-embedded-technical-leadership/" class="md-nav__link">
+      <a href="../010-embedded-technical-leadership/" class="md-nav__link">
         
   
   
@@ -588,7 +597,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/011-error-budget/" class="md-nav__link">
+      <a href="../011-error-budget/" class="md-nav__link">
         
   
   
@@ -616,7 +625,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/012-escalation-with-integrity/" class="md-nav__link">
+      <a href="../012-escalation-with-integrity/" class="md-nav__link">
         
   
   
@@ -644,7 +653,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/013-incentive-alignment/" class="md-nav__link">
+      <a href="../013-incentive-alignment/" class="md-nav__link">
         
   
   
@@ -672,7 +681,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/014-patch-management/" class="md-nav__link">
+      <a href="../014-patch-management/" class="md-nav__link">
         
   
   
@@ -700,7 +709,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/015-explicit-coordination-mechanisms/" class="md-nav__link">
+      <a href="../015-explicit-coordination-mechanisms/" class="md-nav__link">
         
   
   
@@ -728,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/016-multidisciplinary-team/" class="md-nav__link">
+      <a href="../016-multidisciplinary-team/" class="md-nav__link">
         
   
   
@@ -756,7 +765,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/017-service-standard/" class="md-nav__link">
+      <a href="../017-service-standard/" class="md-nav__link">
         
   
   
@@ -784,7 +793,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/018-progressive-rollout/" class="md-nav__link">
+      <a href="../018-progressive-rollout/" class="md-nav__link">
         
   
   
@@ -812,7 +821,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/019-blast-radius-limitation/" class="md-nav__link">
+      <a href="../019-blast-radius-limitation/" class="md-nav__link">
         
   
   
@@ -840,7 +849,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/020-deployment-pipeline/" class="md-nav__link">
+      <a href="../020-deployment-pipeline/" class="md-nav__link">
         
   
   
@@ -868,7 +877,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/021-observability/" class="md-nav__link">
+      <a href="../021-observability/" class="md-nav__link">
         
   
   
@@ -896,7 +905,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/022-circuit-breaker/" class="md-nav__link">
+      <a href="../022-circuit-breaker/" class="md-nav__link">
         
   
   
@@ -924,7 +933,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/023-explicit-service-boundary/" class="md-nav__link">
+      <a href="../023-explicit-service-boundary/" class="md-nav__link">
         
   
   
@@ -952,7 +961,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/024-rollback-capability/" class="md-nav__link">
+      <a href="../024-rollback-capability/" class="md-nav__link">
         
   
   
@@ -980,7 +989,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/025-immutable-infrastructure/" class="md-nav__link">
+      <a href="../025-immutable-infrastructure/" class="md-nav__link">
         
   
   
@@ -1008,7 +1017,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/026-asset-inventory/" class="md-nav__link">
+      <a href="../026-asset-inventory/" class="md-nav__link">
         
   
   
@@ -1036,7 +1045,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/027-defence-in-depth/" class="md-nav__link">
+      <a href="../027-defence-in-depth/" class="md-nav__link">
         
   
   
@@ -1064,7 +1073,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/028-graceful-degradation/" class="md-nav__link">
+      <a href="../028-graceful-degradation/" class="md-nav__link">
         
   
   
@@ -1092,7 +1101,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/029-incremental-migration/" class="md-nav__link">
+      <a href="../029-incremental-migration/" class="md-nav__link">
         
   
   
@@ -1120,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/030-irreversible-action-boundary/" class="md-nav__link">
+      <a href="../030-irreversible-action-boundary/" class="md-nav__link">
         
   
   
@@ -1148,7 +1157,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/031-production-faithful-test-environment/" class="md-nav__link">
+      <a href="../031-production-faithful-test-environment/" class="md-nav__link">
         
   
   
@@ -1176,7 +1185,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
+      <a href="../032-alerting-on-the-alerts-dead-mans-switch/" class="md-nav__link">
         
   
   
@@ -1204,7 +1213,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/033-kill-switch/" class="md-nav__link">
+      <a href="../033-kill-switch/" class="md-nav__link">
         
   
   
@@ -1232,7 +1241,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/034-blameless-post-incident-review/" class="md-nav__link">
+      <a href="../034-blameless-post-incident-review/" class="md-nav__link">
         
   
   
@@ -1260,7 +1269,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/035-contract-first-integration/" class="md-nav__link">
+      <a href="../035-contract-first-integration/" class="md-nav__link">
         
   
   
@@ -1288,7 +1297,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/036-incident-response-procedure/" class="md-nav__link">
+      <a href="../036-incident-response-procedure/" class="md-nav__link">
         
   
   
@@ -1316,7 +1325,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/037-open-incident-communication/" class="md-nav__link">
+      <a href="../037-open-incident-communication/" class="md-nav__link">
         
   
   
@@ -1344,7 +1353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/038-rollback-first-recovery/" class="md-nav__link">
+      <a href="../038-rollback-first-recovery/" class="md-nav__link">
         
   
   
@@ -1372,7 +1381,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/039-chaos-engineering/" class="md-nav__link">
+      <a href="../039-chaos-engineering/" class="md-nav__link">
         
   
   
@@ -1400,7 +1409,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/040-service-level-objective/" class="md-nav__link">
+      <a href="../040-service-level-objective/" class="md-nav__link">
         
   
   
@@ -1428,7 +1437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/041-stress-testing/" class="md-nav__link">
+      <a href="../041-stress-testing/" class="md-nav__link">
         
   
   
@@ -1456,7 +1465,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/042-small-batches/" class="md-nav__link">
+      <a href="../042-small-batches/" class="md-nav__link">
         
   
   
@@ -1484,7 +1493,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/043-concurrent-incident-separation/" class="md-nav__link">
+      <a href="../043-concurrent-incident-separation/" class="md-nav__link">
         
   
   
@@ -1512,7 +1521,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
+      <a href="../044-continuous-integration-with-comprehensive-tests/" class="md-nav__link">
         
   
   
@@ -1540,7 +1549,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/045-corrective-action-integration-into-delivery/" class="md-nav__link">
+      <a href="../045-corrective-action-integration-into-delivery/" class="md-nav__link">
         
   
   
@@ -1568,7 +1577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/046-cutover-rehearsal/" class="md-nav__link">
+      <a href="../046-cutover-rehearsal/" class="md-nav__link">
         
   
   
@@ -1596,7 +1605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/047-iterative-delivery/" class="md-nav__link">
+      <a href="../047-iterative-delivery/" class="md-nav__link">
         
   
   
@@ -1624,7 +1633,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/048-legacy-integration-risk-treatment/" class="md-nav__link">
+      <a href="../048-legacy-integration-risk-treatment/" class="md-nav__link">
         
   
   
@@ -1652,7 +1661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/049-load-testing-as-engineering-practice/" class="md-nav__link">
+      <a href="../049-load-testing-as-engineering-practice/" class="md-nav__link">
         
   
   
@@ -1680,7 +1689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/050-user-research-as-a-continuous-practice/" class="md-nav__link">
+      <a href="../050-user-research-as-a-continuous-practice/" class="md-nav__link">
         
   
   
@@ -1708,7 +1717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/051-verified-recovery/" class="md-nav__link">
+      <a href="../051-verified-recovery/" class="md-nav__link">
         
   
   
@@ -1736,7 +1745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/052-continuous-vulnerability-scanning/" class="md-nav__link">
+      <a href="../052-continuous-vulnerability-scanning/" class="md-nav__link">
         
   
   
@@ -1764,7 +1773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/053-dead-code-removal/" class="md-nav__link">
+      <a href="../053-dead-code-removal/" class="md-nav__link">
         
   
   
@@ -1792,7 +1801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/054-deployment-verification/" class="md-nav__link">
+      <a href="../054-deployment-verification/" class="md-nav__link">
         
   
   
@@ -1817,10 +1826,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="/patterns/055-branch-based-testing/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    55. Branch-Based Testing
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -1836,6 +1872,104 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1848,7 +1982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
+      <a href="../056-certificate-and-secret-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -1876,7 +2010,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/057-ephemeral-build-environment/" class="md-nav__link">
+      <a href="../057-ephemeral-build-environment/" class="md-nav__link">
         
   
   
@@ -1904,7 +2038,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/058-feature-flag-lifecycle-management/" class="md-nav__link">
+      <a href="../058-feature-flag-lifecycle-management/" class="md-nav__link">
         
   
   
@@ -1932,7 +2066,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/059-principle-of-least-privilege/" class="md-nav__link">
+      <a href="../059-principle-of-least-privilege/" class="md-nav__link">
         
   
   
@@ -1960,7 +2094,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/060-reproducible-build/" class="md-nav__link">
+      <a href="../060-reproducible-build/" class="md-nav__link">
         
   
   
@@ -1988,7 +2122,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/061-software-bill-of-materials/" class="md-nav__link">
+      <a href="../061-software-bill-of-materials/" class="md-nav__link">
         
   
   
@@ -2016,7 +2150,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/patterns/062-transitive-dependency-awareness/" class="md-nav__link">
+      <a href="../062-transitive-dependency-awareness/" class="md-nav__link">
         
   
   
@@ -2061,6 +2195,94 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#forces" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Forces
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forces">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-the-forces-apply" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the forces apply
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scarcity-constraint" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scarcity constraint
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#real-world-scenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Real-World Scenarios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Real-World Scenarios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-this-pattern-helped-or-its-absence-hurt" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where this pattern helped (or its absence hurt)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        References
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2073,8 +2295,82 @@
               
               <article class="md-content__inner md-typeset">
                 
-  <h1>404 - Not found</h1>
+                  
 
+
+
+<h1 id="branch-based-testing">Branch-Based Testing *<a class="headerlink" href="#branch-based-testing" title="Permanent link">&para;</a></h1>
+<p><em>This pattern sits below <strong>Production-Faithful Test Environment (31)</strong>, <strong>Contract-First Integration (35)</strong>, <strong>Small Batches (42)</strong>, and <strong>Continuous Integration with Comprehensive Tests (44)</strong>, providing a way to test changes against realistic conditions before committing to the shared codebase.</em></p>
+<hr />
+<p><strong>Developers need to test changes in realistic conditions before committing to the shared codebase, but testing in production is risky and testing in isolated environments is unreliable — and if the only way to test a change is to commit it, people either commit untested work or delay committing until they are certain, both of which slow delivery and increase risk.</strong></p>
+<hr />
+<p>The traditional testing model presents a dilemma. If you test only in a local development environment — on your laptop, against a stub database, with mocked external services — you cannot trust that the change will work in production because the environments are too different. Production has real data, real traffic patterns, real integrations with external systems, real performance characteristics. Changes that work locally fail in production because of differences in scale, state, or configuration that no local environment can fully replicate. But if you test by committing to the main codebase and deploying to production, you risk breaking the build for everyone else or introducing a regression that reaches users before you notice.</p>
+<p>The resolution in many organisations is to delay commitment until confidence is very high — to work in a long-lived feature branch, testing locally as much as possible, until the change feels safe enough to merge. This creates large batches, makes integration painful, and turns every merge into a high-stakes event. The developer who has been working in isolation for days or weeks must reconcile their changes with everything that happened on the main line while they were away. Merge conflicts, integration failures, and subtle incompatibilities concentrate at the merge point.</p>
+<p>Branch-based testing decouples experimentation from commitment. It provides a way for developers to test changes against realistic conditions — real data, real traffic patterns, real integrations — without merging those changes into the main codebase. The implementation varies: preview environments spun up per branch, feature flags that expose changes to a subset of traffic, review apps that replicate the production environment for each pull request. The common property is that the feedback loop between "I made a change" and "I can see how it behaves" does not require committing to the shared line of development.</p>
+<p>Etsy pioneered this with Try, a tool that let developers test changes in the continuous integration environment without committing to trunk. An engineer could push code to Try, watch it build and test in the full CI environment with production-like data, see the results, and iterate — all before the code ever touched the main branch. When the engineer was confident the change worked, they committed. Try made pre-commit testing against realistic conditions routine rather than exceptional. It enabled Etsy's shift to 50+ deployments per day because developers could move fast without breaking the shared build.</p>
+<p>Heroku's Review Apps and Vercel's Preview Deployments extended this model to full ephemeral environments. When a pull request is opened, the platform automatically spins up a complete environment running that branch's code, with its own URL, its own database (seeded from production or test fixtures), and its own configuration. Reviewers can interact with the change as it will behave in production, not just read the code diff. The environment is destroyed when the pull request is merged or closed. This makes testing realistic without requiring anyone to manually set up and tear down test infrastructure.</p>
+<p>The fidelity problem is inherent. No test environment perfectly replicates production. The data is not the same, the traffic volume is not the same, the network latency to external services is not the same. Developers can develop false confidence that a change is safe because it worked in the preview environment, only to discover it fails in production under conditions the test environment did not reproduce. The gap between testing and reality is unavoidable, but branch-based testing narrows it substantially compared to purely local development environments.</p>
+<p>The infrastructure cost is real. Realistic testing environments consume compute, storage, and networking. If every engineer can spin up a full environment for every branch, the organisation is paying for dozens or hundreds of parallel environments that exist only for validation. Cloud providers make this economically viable in ways that on-premise data centres do not, but the cost is still substantial. Organisations must decide which level of fidelity they can afford: full production clones, scaled-down replicas, or shared integration environments with branch-specific routing.</p>
+<p>Branch-based testing completes <strong>Deployment Pipeline (20)</strong> by providing a testing stage between local development and production deployment. It extends <strong>Production-Faithful Test Environment (31)</strong> by making that environment available on-demand for every branch rather than as a single shared resource.</p>
+<p>Therefore:</p>
+<p><strong>The organisation provides a way for developers to test changes against realistic conditions — real data, real traffic patterns, real integrations — without merging those changes into the main codebase. This is implemented through preview environments spun up per branch, feature flags exposing changes to controlled traffic, or review apps that replicate production for each pull request. The test environment is sufficiently realistic that developers can trust the results, but the organisation remains honest about the fidelity gap and does not treat preview environment success as a guarantee of production success. The infrastructure to support branch-based testing is maintained as a first-class platform capability, not as an ad-hoc script each team builds independently.</strong></p>
+<hr />
+<p><em>Branch-Based Testing sits at the implementation edge of the pattern language. It is a leaf-level technique that provides the pre-commit testing mechanism making continuous integration safe at high velocity, giving developers a way to validate changes against realistic conditions without committing to the shared codebase.</em></p>
+<h2 id="forces">Forces<a class="headerlink" href="#forces" title="Permanent link">&para;</a></h2>
+<h3 id="how-the-forces-apply">How the forces apply<a class="headerlink" href="#how-the-forces-apply" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Speed vs Safety</strong>: Branch-based testing makes the two forces reinforcing rather than opposed. Developers can move fast because they can test quickly without committing. They can stay safe because the test environment catches problems before they reach the shared codebase. The alternative — committing blindly or delaying commitment until certainty — sacrifices both speed and safety. The pattern's power is that it shifts the speed-safety trade-off from "commit fast or test thoroughly" to "test fast so you can commit with confidence."</p>
+</li>
+<li>
+<p><strong>Autonomy vs Alignment</strong>: Developers retain full autonomy to experiment in their branch environments without coordination. They can try breaking changes, risky refactors, experimental approaches — anything — because the blast radius is constrained to their own environment. But the alignment mechanism (the main branch, the shared deployment pipeline) remains protected. No one can break the build for everyone else by experimenting in their own space.</p>
+</li>
+<li>
+<p><strong>Scope vs Comprehensibility</strong>: Branch-based testing keeps the scope of any individual change comprehensible because changes are tested in isolation before integration. The developer sees the effect of their change against a known baseline (the current main branch) without the noise of other people's concurrent changes. This makes it easier to reason about what the change does and to diagnose problems when they occur.</p>
+</li>
+<li>
+<p><strong>Determinism vs Adaptability</strong>: The main codebase remains deterministic — it only accepts changes that have been tested and reviewed. Individual developers retain adaptability — they can iterate quickly in their branch environments, trying different approaches until one works. The pattern separates the space for adaptation (branch environments) from the space for determinism (the main line).</p>
+</li>
+</ul>
+<h3 id="scarcity-constraint">Scarcity constraint<a class="headerlink" href="#scarcity-constraint" title="Permanent link">&para;</a></h3>
+<p>Branch-based testing environments consume infrastructure: compute to run the environments, storage for ephemeral databases, networking for external integrations. For organisations with hundreds of engineers each working on multiple branches, the infrastructure cost can be substantial — potentially more expensive than the production environment itself because there are more test environments than production environments. The alternative — shared integration environments or purely local testing — appears cheaper because the cost is concentrated in fewer machines. But the hidden cost is in developer time: waiting for shared environments to become available, debugging integration failures that could have been caught earlier, and the risk of deploying untested changes because testing was too expensive or slow. The economic question is whether the organisation values infrastructure cost or developer productivity more highly. Most organisations systematically undervalue developer time because it is a distributed cost (many people slowed down a little) rather than a line item (test infrastructure spending).</p>
+<h2 id="real-world-scenarios">Real-World Scenarios<a class="headerlink" href="#real-world-scenarios" title="Permanent link">&para;</a></h2>
+<h3 id="where-this-pattern-helped-or-its-absence-hurt">Where this pattern helped (or its absence hurt)<a class="headerlink" href="#where-this-pattern-helped-or-its-absence-hurt" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><strong>Etsy transformation (2008–2014)</strong>: Try was central to Etsy's shift to 50+ deploys per day. Developers could test changes in the CI environment with production-like data before committing to trunk. This made continuous integration safe at high velocity — engineers did not have to choose between speed (commit without testing) and safety (test thoroughly in isolation). Try enabled the cultural norm that every change was tested in realistic conditions before it reached the main branch.</p>
+</li>
+<li>
+<p><strong>Heroku Review Apps (2015–present)</strong>: Review Apps made branch-based testing a platform feature rather than something each team had to build. When a pull request is opened, Heroku automatically creates a full environment running that branch's code. Reviewers can click a link and interact with the change as it will behave in production. The pattern became standard practice in the Heroku ecosystem, demonstrating that the infrastructure investment was worth making once rather than requiring every team to build it independently.</p>
+</li>
+<li>
+<p><strong>Vercel Preview Deployments (2020–present)</strong>: Vercel extended the model to static sites and serverless functions, making preview deployments the default for every commit to every branch. The platform's success showed that developers valued instant, realistic testing enough to adopt a platform specifically because it provided this capability.</p>
+</li>
+</ul>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Humble, J., &amp; Farley, D. (2010). <em>Continuous Delivery: Reliable Software Releases through Build, Test, and Automation</em>. Addison-Wesley. — Foundational text on pre-commit testing practices.</li>
+<li>Heroku Review Apps documentation. devcenter.heroku.com. — Canonical implementation of ephemeral per-branch environments.</li>
+<li>Vercel Preview Deployments documentation. vercel.com/docs. — Modern implementation extending preview environments to serverless architectures.</li>
+<li>GitHub Actions documentation on branch-based workflows. docs.github.com. — Standard implementation of branch-based CI/CD.</li>
+<li>Code as Craft (Etsy Engineering Blog). <em>Try — Etsy's pre-commit testing environment</em>. (2011). — Original description of Try, one of the earliest implementations of this pattern.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
               </article>
             </div>
           
@@ -2115,10 +2411,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "/assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "search.suggest", "search.highlight", "content.code.copy", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
